@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Grupo Lobo Energia — Parcerias Empresariais (Prévia)</title>
+<style>
+:root { font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",sans-serif; color:#202124; background:white; font-synthesis:none; text-rendering:optimizeLegibility; }
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {margin:0; min-width:320px; background:#fff; -webkit-font-smoothing:antialiased}
+button {font:inherit;cursor:pointer} a {text-decoration:none}
+.shell {width:min(100%,1180px); margin:0 auto; padding-left:clamp(18px,4vw,36px); padding-right:clamp(18px,4vw,36px)}
+.header {height:70px;position:sticky;top:0;z-index:15;border-bottom:1px solid rgba(0,0,0,.05);background:rgba(255,255,255,.95);backdrop-filter:blur(20px)}
+.header .shell {height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand {display:inline-flex;gap:10px;align-items:center;min-width:0}
+.brand img{width:38px;height:38px;border-radius:11px;display:block;flex-shrink:0}
+.brandtext{font-size:16px;font-weight:650;letter-spacing:-.035em;white-space:nowrap;color:#101418}
+.hero{position:relative;overflow:hidden;background:#fff}
+.hero::before{content:"";position:absolute;left:-144px;bottom:-80px;width:320px;height:320px;border-radius:50%;background:#f3f3f3;pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:20px;padding-top:24px;padding-bottom:32px}
+.headline{text-align:center}
+.label{display:inline-flex;padding:6px 13px;border-radius:999px;background:#FFD600;color:#202124;font-size:10px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.headline h1{margin:17px auto 0;max-width:640px;font-size:48px;font-weight:650;line-height:.91;letter-spacing:-.06em}
+.blue{color:#3483FA}
+.headline h1 .smallline{display:block;margin-top:14px;font-size:26px;line-height:1.1;letter-spacing:-.035em;font-weight:650}
+.subtitle{margin:20px auto 0;max-width:32rem;font-size:18px;line-height:1.18;font-weight:650;letter-spacing:-.02em}
+.visual{order:2;position:relative;min-width:0}
+.photo{position:relative;height:340px;overflow:hidden;border-radius:34px;background:linear-gradient(140deg,#e6f9fa,#edf9f3 45%,#e7eff3);box-shadow:0 20px 55px rgba(0,0,0,.10)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:25% center}
+.photo-tag{position:absolute;right:16px;top:16px;background:rgba(255,255,255,.96);border-radius:16px;padding:9px 11px;box-shadow:0 12px 30px rgba(0,0,0,.14);backdrop-filter:blur(10px)}
+.photo-tag .brand img{width:33px;height:33px}.photo-tag .brandtext{font-size:14px}
+.overlays{display:grid;grid-template-columns:1fr 1fr;gap:9px;position:absolute;left:16px;right:16px;bottom:16px}
+.tile{min-width:0;min-height:100px;border-radius:18px;background:white;padding:17px 16px;box-shadow:0 12px 32px rgba(0,0,0,.17)}
+.tile.yellow{background:#FFD600}.tile .kicker{font-size:13px;color:#5f6368}.tile.yellow .kicker{color:#665700}
+.tile strong{display:block;margin-top:8px;font-size:20px;line-height:1.13;letter-spacing:-.03em;color:#121212}
+.intro{order:3}
+.intro p{max-width:32rem;margin:0 0 14px;font-size:14px;line-height:1.7;color:rgba(0,0,0,.55)}
+.intro .strong {font-weight:650;color:#222}
+.button{min-height:56px;border:none;border-radius:15px;background:#3483FA;color:#fff;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:650;box-shadow:0 12px 30px rgba(52,131,250,.22)}
+.button .arrow{font-size:20px;line-height:1}
+.inline-cta{display:none;min-height:44px;padding:0 20px}
+.bottom-cta{width:100%;margin-top:15px}
+.note{margin-top:15px!important;font-size:12px!important;line-height:1.5!important;color:#666!important}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.pills span{font-size:10px;font-weight:650;border-radius:999px;background:#f6f6f6;padding:8px 11px;white-space:nowrap}
+.preview-footer{color:#91979c;text-align:center;padding:12px 22px 35px;font-size:12px}
+#preview-dialog{display:none;position:fixed;z-index:30;bottom:20px;left:50%;transform:translateX(-50%);max-width:min(90%,430px);padding:15px 19px;border-radius:14px;background:#131b21;color:#fff;font-size:14px;box-shadow:0 10px 30px #0003;}
+@media(min-width:768px){.hero-grid{grid-template-columns:.92fr 1.08fr;column-gap:32px;row-gap:0;align-items:center;padding-top:56px;padding-bottom:56px}.headline{grid-column:1;grid-row:1;text-align:left}.headline h1{margin:20px 0 0;font-size:72px}.headline h1 .smallline{font-size:36px}.subtitle{margin:22px 0 0}.visual{grid-column:2;grid-row:1 / span 2}.photo{height:560px}.intro{grid-column:1;grid-row:2;padding-top:22px}.bottom-cta{width:auto}.inline-cta{display:inline-flex}}
+@media(max-width:380px){.brandtext{font-size:14px}.photo-tag .brandtext{font-size:12px}.headline h1{font-size:43px}.headline h1 .smallline{font-size:23px}.tile strong{font-size:17px}}
+.sect{padding:50px 0}.sect:nth-of-type(even){background:#f7f9fc}.sect h2{font-size:clamp(29px,4vw,44px);line-height:1.1;letter-spacing:-.05em}.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.mini{background:#fff;border:1px solid #e5eaf2;border-radius:20px;padding:21px}.mini h3{margin:0 0 8px;font-size:17px}.mini p{font-size:13px;color:#65717b;line-height:1.5}.gold{background:#FFD600}.note2{font-size:12px;color:#67717b;line-height:1.5}@media(min-width:768px){.tiles.benefits{grid-template-columns:repeat(4,1fr)}}@media(max-width:540px){.tiles.rewards,.tiles.steps{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<header class="header"><div class="shell"><div class="brand"><img src="https://energia-app-uv2r.onrender.com/icon.svg" alt="Logo do Grupo Lobo Energia" /><span class="brandtext">Grupo Lobo Energia</span></div><button class="button inline-cta" onclick="previewCTA()">Quero ser parceiro <span class="arrow">→</span></button></div></header>
+<main><section class="hero"><div class="shell hero-grid">
+<div class="headline"><span class="label">PROGRAMA DE EMPRESAS PARCEIRAS</span><h1>Ganhe <span class="blue">divulgação</span><br>e novos clientes <span class="smallline">sem pagar nada para participar.</span></h1><p class="subtitle">Sua empresa ganha. Sua equipe economiza.</p></div>
+<div class="visual"><div class="photo"><img src="https://achou-prime.lovable.app/images/pre-lancamento/coelba-celular.webp" alt="Pessoa consultando a economia de energia pelo celular" onerror="this.onerror=null;this.src='https://achou-prime.lovable.app/images/pre-lancamento/mulher-brasileira-celular.webp'" />
+<div class="photo-tag"><div class="brand"><img src="https://energia-app-uv2r.onrender.com/icon.svg" alt=""/><span class="brandtext">Grupo Lobo Energia</span></div></div>
+<div class="overlays"><div class="tile"><span class="kicker">Investimento da empresa</span><strong>R$ 0 para aderir</strong></div><div class="tile yellow"><span class="kicker">Receita recorrente</span><strong>10% de comissão*</strong></div></div></div></div>
+<div class="intro"><p>Credencie sua empresa gratuitamente no Clube de Benefícios e ganhe oportunidades de <span class="strong">divulgação, novos clientes e marketing</span>.</p><p class="strong">Basta apoiar uma apresentação online rápida para seus colaboradores. Quem tiver interesse pode economizar até 30% na conta de luz. Nós cuidamos do restante.</p><button type="button" class="button bottom-cta" onclick="previewCTA()">Credenciar empresa grátis <span class="arrow">→</span></button><p class="note">* Comissão proposta de 10%, sujeita à formalização. Economia de até 30% conforme elegibilidade e simulação.</p><div class="pills"><span>✓ Empresa credenciada grátis</span><span>✓ Divulgação e clientes</span><span>✓ Encontro online</span></div></div>
+</div></section><section class="sect"><div class="shell"><h2>Sua empresa <span class="blue">ganha mais.</span><br>Sem investir nada.</h2><div class="tiles benefits"><div class="mini"><h3>📣 Divulgação</h3><p>Mais exposição para sua marca.</p></div><div class="mini"><h3>🤝 Novos clientes</h3><p>Indicações pela rede do clube.</p></div><div class="mini"><h3>💸 Comissão de 10%*</h3><p>Receita recorrente sobre carteira elegível.</p></div><div class="mini"><h3>🎥 Criadores</h3><p>Marketing e campanhas ao atingir metas.</p></div></div></div></section><section class="sect"><div class="shell"><h2>Quanto mais adesões,<br><span class="blue">mais divulgação.</span></h2><div class="tiles rewards"><div class="mini"><p>META DE CARTEIRA MENSAL</p><h2>R$ 5 mil</h2><h3>Ação de divulgação da empresa</h3></div><div class="mini gold"><p>META DE CARTEIRA MENSAL</p><h2>R$ 10 mil</h2><h3>Conteúdo com criador ou influenciador</h3></div></div><p class="note2">Metas calculadas sobre contas efetivamente credenciadas. Campanhas condicionadas ao regulamento e disponibilidade.</p></div></section><section class="sect"><div class="shell"><h2>É só convidar.<br><span class="blue">Nós fazemos o restante.</span></h2><div class="tiles steps"><div class="mini"><h3>1. Autorize</h3><p>O gerente divulga o benefício.</p></div><div class="mini"><h3>2. Reunião online</h3><p>1 ou 2 apresentações de 15 minutos.</p></div><div class="mini"><h3>3. Cadastro</h3><p>Funcionários interessados fazem a adesão voluntariamente.</p></div><div class="mini"><h3>4. Acompanhamento</h3><p>Nossa equipe acompanha propostas e assinaturas.</p></div></div></div></section><section class="sect"><div class="shell" style="text-align:center"><h2>Pronto para <span class="blue">ganhar mais?</span></h2><button class="button" onclick="previewCTA()">Quero credenciar minha empresa →</button><p class="note2">Prévia para aprovação. Sem cadastro real.</p></div></section></main><div class="preview-footer">Prévia visual · Parceria empresarial · Cadastro não integrado</div>
+<div id="preview-dialog" role="status">Prévia visual; credenciamento será integrado após aprovação.</div>
+<script>function previewCTA(){const x=document.getElementById('preview-dialog');x.style.display='block';setTimeout(()=>x.style.display='none',3600)}</script>
+</body></html>
