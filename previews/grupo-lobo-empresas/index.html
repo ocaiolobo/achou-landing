@@ -582,6 +582,30 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
  .count-hero{animation:softLift 4s ease-in-out infinite alternate}
  @keyframes softLift{from{translate:0 0}to{translate:0 -5px}}
 }
+
+/* Ajustes de outubro — somente tipografia da capa, foto e letreiro de portfólio */
+.hero-copy .hero-type{font-weight:785;letter-spacing:-.065em;line-height:1.045;font-size:clamp(43px,5.3vw,68px);max-width:580px;word-break:normal;margin-top:24px;margin-bottom:26px}
+.hero-type-second{display:block;color:#202a38;font-weight:760}
+.hero-copy .hero-free{display:inline-block;position:relative;color:#2878eb;font-weight:830;margin-top:14px;padding:4px 0 7px;white-space:normal}
+.hero-copy .hero-free::after{content:"";display:block;position:absolute;left:0;right:1%;height:6px;bottom:1px;background:#FFD600;border-radius:5px;transform:rotate(-.45deg)}
+.hero-period{color:#2878eb}
+@media(max-width:850px){.hero-copy .hero-type{margin-left:auto;margin-right:auto;max-width:720px}}
+@media(max-width:590px){.hero-copy .hero-type{font-size:clamp(36px,8.5vw,47px);line-height:1.08;letter-spacing:-.057em}.hero-copy .hero-free{margin-top:12px}}
+/* Movement mimics the existing proposal's horizontal logo strip */
+.brand-marquee{background:#f8faff;border:1px solid #e7ecf4;border-radius:23px;padding:25px 0 21px;margin:27px 0 30px;overflow:hidden}
+.brand-marquee .marquee-label{text-transform:uppercase;letter-spacing:.07em;font-size:11px;font-weight:780;color:#6e8095;margin-bottom:21px;padding:0 26px}
+.marquee-window{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee-track{width:max-content;display:flex;align-items:center;animation:reelShift 33s linear infinite;will-change:transform}
+.marquee-window:hover .marquee-track{animation-play-state:paused}
+.marquee-set{display:flex;gap:18px;padding-left:18px;align-items:center}
+.marquee-logo{width:170px;height:104px;border:1px solid #e8eef6;border-radius:18px;background:#fff;box-shadow:0 8px 20px #183d5d0c;flex:0 0 170px;display:flex;justify-content:center;align-items:center;padding:23px 20px}
+.marquee-logo img{width:100%;height:100%;max-height:55px;object-fit:contain;object-position:center}
+.marquee-logo.logo-word{font-size:35px;letter-spacing:-.045em;font-weight:850;color:#167ac1}
+.logo-fallback{font-size:19px;font-weight:790;letter-spacing:-.035em}
+@keyframes reelShift{to{transform:translateX(-50%)}}
+@media(max-width:590px){.brand-marquee{padding:22px 0 18px}.marquee-logo{width:139px;height:85px;flex-basis:139px;padding:18px 16px}.marquee-logo img{max-height:47px}.marquee-logo.logo-word{font-size:29px}.marquee-set{gap:12px;padding-left:12px}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none!important}.marquee-window{overflow-x:auto}.marquee-set[aria-hidden=true]{display:none}}
+
 </style>
 </head>
 <body>
@@ -593,7 +617,7 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
 <section class="hero" aria-labelledby="main-title"><div class="shell hero-grid">
  <div class="hero-copy">
   <span class="eyebrow">PARCERIA GRATUITA PARA ESTABELECIMENTOS</span>
-  <h1 id="main-title">Mais clientes para seu estabelecimento.<br><span class="blue">100% gratuito.</span></h1>
+  <h1 id="main-title" class="hero-type">Mais clientes <span class="hero-type-second">para seu estabelecimento.</span><span class="hero-free">100% gratuito<span class="hero-period">.</span></span></h1>
   <p class="lead">O <strong>Clube VIP</strong> conecta sua empresa a novos consumidores, oferecendo divulgação, criadores de conteúdo e oportunidades para aumentar seu faturamento.</p>
   <div class="hero-badges proof-pills"><span><b>✓</b> Participação 100% gratuita</span><span><b>✓</b> Sem nenhum investimento</span></div>
   <a class="button hero-cta" href="#cadastro">QUERO CREDENCIAR MEU ESTABELECIMENTO <span class="arrow">→</span></a>
@@ -613,7 +637,7 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
   <figure><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/itaigara.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/itaigara.webp'" alt="Imagem do Itaigara aproveitada do material original" loading="lazy"><figcaption>Itaigara</figcaption></figure>
   <figure><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/pituba.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/itaigara.webp'" alt="Fotografia do bairro da Pituba em Salvador" loading="lazy"><figcaption>Pituba</figcaption></figure>
   <figure class="ppl"><img src="https://nexa-lobo.lovable.app/images/petrobras-4k.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/petrobras.webp'" alt="Fotografia que representa profissionais do setor de petróleo, da proposta original" loading="lazy"><figcaption>Funcionários da Petrobras<span class="profile-label">Perfil de público</span></figcaption></figure>
-  <figure class="ppl"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/servidores.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/servidores.webp'" alt="Imagem referente a servidores públicos da Bahia, do material original" loading="lazy"><figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption></figure>
+  <figure class="ppl"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/GovernadoriaBA010611.jpg?width=1600" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_da_plataforma_II_CAB_(4657000396).jpg?width=1500'" alt="Foto documental da sede do Governo da Bahia, no Centro Administrativo de Salvador" loading="lazy"><figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption></figure>
  </div>
 </div></section>
 <section class="section offer-section" id="beneficios" aria-labelledby="h-beneficios"><div class="shell">
@@ -627,13 +651,13 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
  <p class="big-guidance">Quanto mais contas de luz credenciadas dos colaboradores, <span class="strong-blue">mais divulgação sua empresa conquista!</span></p>
  <div class="target-grid">
   <article class="target-card">
-   <div class="target-pic"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1600&q=90" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
+   <div class="target-pic"><img src="https://images.pexels.com/photos/15119167/pexels-photo-15119167.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
    <div class="target-content"><div class="value">R$ 5 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa ganha</h3>
     <ul><li><span><b>1 criador de conteúdo</b> para visitar, gravar e divulgar seu estabelecimento.</span></li><li><span>Divulgação especial na comunidade do Clube VIP.</span></li><li><span>Conteúdo profissional para publicar nas suas redes sociais.</span></li></ul>
    </div>
   </article>
   <article class="target-card premium">
-   <div class="target-pic"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=90" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
+   <div class="target-pic"><img src="https://images.pexels.com/photos/9809838/pexels-photo-9809838.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
    <div class="target-content"><div class="value">R$ 10 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa conquista ainda mais</h3>
     <ul><li><span><b>Mais 1 criador de conteúdo</b> para divulgar seu negócio.</span></li><li><span><b>15 dias em destaque</b> nas comunidades do Clube VIP.</span></li><li><span>Publicações nos grupos dos condomínios em que atuamos.</span></li><li><span>Campanha com <b>tráfego pago</b> para impulsionar sua marca.</span></li><li><span>Divulgação especial de ofertas, produtos e serviços.</span></li></ul>
    </div>
@@ -649,7 +673,7 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
   <article class="voucher redcard"><span class="vtype">Vale-compras</span><b class="merchant with-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Assa%C3%AD_Atacadista_logo_2024.svg" alt="Logo Assaí" loading="lazy" onerror="this.style.display='none'"> Assaí</b><b class="amount">R$ 500</b></article>
   <article class="voucher purplecard"><span class="vtype">Benefícios em óticas</span><b class="merchant">Óticas Salvador e Ernesto</b><b class="amount sm">Vouchers VIP</b></article>
   <article class="voucher navycard"><span class="vtype">Combustível</span><b class="merchant with-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrobras_horizontal_logo.svg" alt="Logo Petrobras" loading="lazy" onerror="this.style.display='none'"> Postos Petrobras participantes</b><b class="amount">R$ 200</b></article>
-  <article class="voucher partner-photo"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=85" alt="Foto real de evento com público, ilustrativa das experiências em camarotes" loading="lazy"><span class="v-overlay"><span class="vtype">Experiências especiais</span><b class="merchant">Camarotes de Salvador</b><b class="amount sm">Ingressos</b></span></article>
+  <article class="voucher partner-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Carnaval_Barra-Ondina_2014_(12846095963).jpg?width=1500" alt="Fotografia documental do Carnaval de Salvador no circuito Barra-Ondina" loading="lazy"><span class="v-overlay"><span class="vtype">Experiências especiais</span><b class="merchant">Camarotes do Carnaval de Salvador</b><b class="amount sm">Ingressos</b></span></article>
  </div>
  <p class="voucher-note">Vouchers, valores, parceiros e ingressos sujeitos à disponibilidade e ao regulamento das campanhas. Imagens ilustrativas; cartões visuais não são vouchers resgatáveis.</p>
 </div></section>
@@ -660,7 +684,7 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
  <p class="punch">Mais visibilidade para sua marca e novas oportunidades de negócios!</p>
  <p class="fine">Premiação sujeita ao regulamento e à disponibilidade do influenciador.</p>
  </div>
- <div class="winner-image"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/influenciadora.jpg" alt="Fotografia real de criadora de conteúdo para representar campanha com influenciador" loading="lazy"><div class="winner-sticker">Campanha especial <b>até 1 milhão</b> de seguidores</div></div>
+ <div class="winner-image"><img src="https://images.pexels.com/photos/8370744/pexels-photo-8370744.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia real de criadora de conteúdo para representar campanha com influenciador" loading="lazy"><div class="winner-sticker">Campanha especial <b>até 1 milhão</b> de seguidores</div></div>
 </div></section>
 <section class="section soft process-section" id="contrapartida" aria-labelledby="h-contrapartida"><div class="shell">
  <div class="section-kicker"><span class="stepnum">04.</span><span>SIMPLIFICAMOS TUDO</span></div>
@@ -679,6 +703,22 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
  <div class="section-kicker"><span class="stepnum">05.</span><span>PORTFÓLIO DE SUCESSO</span></div>
  <h2 id="h-portfolio">Grandes marcas já fazem parte da nossa história.</h2>
  <p class="proof-intro">Conheça empresas, estabelecimentos e comunidades que participam das nossas iniciativas.</p>
+ <div class="brand-marquee" aria-label="Marcas apresentadas no portfólio comercial">
+ <div class="marquee-label">Marcas apresentadas no nosso portfólio</div>
+ <div class="marquee-window"><div class="marquee-track">
+  <div class="marquee-set"><span class="marquee-logo" aria-label="Vivo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vivo%20(Brazil)%20logo.svg" loading="lazy" alt="Logo Vivo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Vivo</span></span>
+<span class="marquee-logo logo-word" aria-label="HGU">HGU</span>
+<span class="marquee-logo" aria-label="McDonald's"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's%20wordmark.svg" loading="lazy" alt="Logo McDonald's" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">McDonald's</span></span>
+<span class="marquee-logo" aria-label="Burger King"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Burger%20King%202020%20(circle).svg" loading="lazy" alt="Logo Burger King" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Burger King</span></span>
+<span class="marquee-logo" aria-label="Renner"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo%20das%20Lojas%20Renner.svg" loading="lazy" alt="Logo Renner" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Renner</span></span>
+<span class="marquee-logo" aria-label="C&A"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%26A%20logo.svg" loading="lazy" alt="Logo C&A" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">C&A</span></span></div><div class="marquee-set" aria-hidden="true"><span class="marquee-logo" aria-label="Vivo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vivo%20(Brazil)%20logo.svg" loading="lazy" alt="Logo Vivo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Vivo</span></span>
+<span class="marquee-logo logo-word" aria-label="HGU">HGU</span>
+<span class="marquee-logo" aria-label="McDonald's"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's%20wordmark.svg" loading="lazy" alt="Logo McDonald's" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">McDonald's</span></span>
+<span class="marquee-logo" aria-label="Burger King"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Burger%20King%202020%20(circle).svg" loading="lazy" alt="Logo Burger King" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Burger King</span></span>
+<span class="marquee-logo" aria-label="Renner"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo%20das%20Lojas%20Renner.svg" loading="lazy" alt="Logo Renner" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">Renner</span></span>
+<span class="marquee-logo" aria-label="C&A"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%26A%20logo.svg" loading="lazy" alt="Logo C&A" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="logo-fallback" style="display:none">C&A</span></span></div>
+ </div></div>
+</div>
  <div class="proof-grid">
   <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-salvador.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/otica-salvador.webp'" loading="lazy" alt="Fachada da Óticas Salvador no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Salvador</h3><div class="big-stat">R$ 31.428</div><div class="statline"><span>Total gerado</span><span>28 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-salvador.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
   <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-ernesto.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/otica-ernesto.webp'" loading="lazy" alt="Fachada da Ernesto no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Ernesto</h3><div class="big-stat">R$ 18.762</div><div class="statline"><span>Total gerado</span><span>11 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-ernesto.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
