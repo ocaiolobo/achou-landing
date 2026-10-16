@@ -745,6 +745,71 @@ html[data-versao="2"] .footer a{color:#adf8de}
  html[data-versao="2"] .section{padding-top:64px;padding-bottom:64px}
 }
 
+
+/* Capa única aprovada para versão 1: sem fotografias, sem coroa, identidade azul/amarelo */
+.hero-reimagined{display:none}
+html[data-versao="1"] .hero{display:none!important}
+html[data-versao="1"] .hero-reimagined{display:block!important;position:relative;isolation:isolate;overflow:hidden;background:#fff;color:#071b3e;padding:0 0 0}
+html[data-versao="1"] .hero-reimagined:before{content:"";position:absolute;z-index:-1;pointer-events:none;width:min(58vw,850px);height:min(62vw,820px);top:-37%;right:-23%;border-radius:50%;background:radial-gradient(circle,#fff7d8 0%,#fff9e9 48%,#fff 74%);opacity:.78}
+html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-index:-1;pointer-events:none;width:460px;height:460px;bottom:-390px;left:-290px;border:2px solid #ffdf5829;border-radius:50%}
+.hv1-shell{position:relative;max-width:1120px;padding-top:39px;padding-bottom:83px}
+.hv1-topline{display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:11px;font-weight:750;letter-spacing:.08em;color:#253d5d;margin:12px 0 42px}
+.hv1-topdot{width:4px;height:25px;border-radius:6px;background:#FFD600;display:block}
+.hv1-grid{display:grid;grid-template-columns:minmax(0,1.19fr) minmax(310px,.81fr);align-items:center;gap:50px}
+.hv1-intro h1{font-size:clamp(48px,6.65vw,86px);font-weight:850;line-height:1.06;letter-spacing:-.075em;color:#071b3e;margin:0 0 29px}
+.hv1-intro h1 span{color:#f3b800}
+.hv1-intro p{font-size:clamp(17px,1.65vw,21px);font-weight:410;line-height:1.58;letter-spacing:-.02em;max-width:545px;color:#536275;margin:0}
+.hv1-value{align-self:center;position:relative;display:flex;gap:22px;align-items:flex-start;background:linear-gradient(138deg,#fffef8,#fff6ce);border:1px solid #fceca7;border-radius:30px;padding:31px 29px 28px;box-shadow:0 20px 53px #76571a10}
+.hv1-value:after{content:"";position:absolute;z-index:-1;width:120%;height:130%;border-radius:50%;background:#fff7da63;right:-21%;top:-13%;filter:blur(45px)}
+.hv1-gift{width:67px;height:67px;border-radius:22px;background:#ffda3d;color:#071b3e;display:grid;place-items:center;flex:0 0 67px}
+.hv1-gift svg{width:37px;height:37px}
+.hv1-free-wrap strong{display:flex;flex-direction:column;white-space:nowrap;font-size:clamp(34px,4vw,54px);line-height:1.01;font-weight:850;letter-spacing:-.067em;color:#071b3e}
+.hv1-free-wrap strong span{font-size:.79em;color:#eeae00;margin-top:2px}
+.hv1-free-wrap p{font-size:14px;line-height:1.55;color:#5a6372;margin:16px 0 0;letter-spacing:-.012em}
+.hv1-cta{background:#FFD600;box-shadow:0 13px 33px #e9b00026;border:1px solid #f7ca00;color:#071b3e!important;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-radius:100px;padding:12px 13px 12px 36px;font-size:clamp(14px,1.6vw,19px);font-weight:840;letter-spacing:-.03em;min-height:78px;margin:45px auto 0;max-width:980px;transition:transform .18s ease,box-shadow .18s ease}
+.hv1-cta:hover{transform:translateY(-2px);box-shadow:0 18px 37px #e9b0003a}
+.hv1-cta-icon{width:55px;height:55px;flex:0 0 55px;display:grid;place-items:center;border-radius:50%;background:#071b3e;color:#fff;font-size:30px;font-weight:400}
+.hv1-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:980px;margin:38px auto 0;gap:0}
+.hv1-feature{display:flex;gap:13px;align-items:center;justify-content:center;padding:5px 17px;min-height:59px;border-right:1px solid #cbd3dc;color:#263a51;font-size:15px;line-height:1.3;font-weight:540}
+.hv1-feature:last-child{border-right:0}
+.hv1-feature-icon{width:47px;height:47px;flex:0 0 47px;display:grid;place-items:center;border-radius:50%;background:#fff1b3;color:#081c41}
+.hv1-feature-icon svg{width:26px;height:26px}
+@media(max-width:900px){
+ .hv1-shell{padding-top:33px;padding-bottom:66px}
+ .hv1-topline{margin-bottom:32px}
+ .hv1-grid{grid-template-columns:1fr;gap:32px}
+ .hv1-intro h1{font-size:clamp(52px,8.5vw,76px)}
+ .hv1-value{max-width:490px}
+ .hv1-cta{margin-top:35px}
+}
+@media(max-width:600px){
+ .hv1-shell{padding-top:18px;padding-bottom:60px}
+ .hv1-topline{justify-content:flex-start;font-size:9.5px;letter-spacing:.07em;margin:20px 0 42px}
+ .hv1-topdot{height:23px}
+ .hv1-intro h1{font-size:clamp(45px,10vw,64px);letter-spacing:-.071em;line-height:1.065;margin:0 0 23px}
+ .hv1-intro p{font-size:16px;line-height:1.55;max-width:405px}
+ .hv1-grid{gap:27px}
+ .hv1-value{max-width:100%;gap:16px;padding:22px 20px;border-radius:23px}
+ .hv1-gift{width:56px;height:56px;flex-basis:56px;border-radius:17px}
+ .hv1-gift svg{width:30px;height:30px}
+ .hv1-free-wrap strong{font-size:clamp(35px,8.8vw,48px)}
+ .hv1-free-wrap strong span{font-size:.8em}
+ .hv1-free-wrap p{font-size:12px;line-height:1.45;margin:11px 0 0}
+ .hv1-cta{min-height:65px;padding:9px 10px 9px 20px;margin-top:31px;gap:9px;font-size:clamp(11px,3.45vw,15px);letter-spacing:-.018em}
+ .hv1-cta-icon{width:47px;height:47px;flex-basis:47px;font-size:25px}
+ .hv1-features{gap:0;margin-top:30px}
+ .hv1-feature{gap:7px;flex-direction:column;text-align:center;padding:3px 6px;font-size:10px;line-height:1.3;min-height:79px}
+ .hv1-feature-icon{width:39px;height:39px;flex-basis:39px}
+ .hv1-feature-icon svg{width:22px;height:22px}
+}
+@media(max-width:355px){
+ .hv1-intro h1{font-size:40px}
+ .hv1-value{padding:18px 14px;gap:12px}
+ .hv1-gift{width:46px;height:46px;flex-basis:46px}
+ .hv1-free-wrap strong{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){.hv1-cta{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -753,6 +818,27 @@ html[data-versao="2"] .footer a{color:#adf8de}
  <div class="shell head-inner"><a class="brand" href="#top" aria-label="Clube VIP, voltar ao início"><span class="brand-mark">VIP</span> Clube <span class="vip">VIP</span></a><a class="button small" href="#cadastro">Credenciar empresa →</a></div>
 </header>
 <main id="top">
+<section class="hero-reimagined" aria-labelledby="v1-hero-title">
+ <div class="shell hv1-shell">
+  <div class="hv1-topline"><span class="hv1-topdot"></span> PARA ESTABELECIMENTOS DA BAHIA</div>
+  <div class="hv1-grid">
+   <div class="hv1-intro">
+    <h1 id="v1-hero-title">Mais clientes<br><span>para o seu</span><br>estabelecimento.</h1>
+    <p>Receba divulgação, criadores de conteúdo e mais oportunidades para aumentar seu faturamento.</p>
+   </div>
+   <div class="hv1-value">
+    <div class="hv1-gift"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8H8.5C5.8 8 5 6.5 5.8 5.1 7.5 2.6 11.4 6.3L12 8Zm0 0h3.5c2.7 0 3.5-1.5 2.7-2.9C16.5 2.6 12.6 6.3 12 8Z"/></svg></div>
+    <div class="hv1-free-wrap"><strong>100%<span>GRATUITO.</span></strong><p>Sem taxas, sem mensalidade,<br>sem compromisso.</p></div>
+   </div>
+  </div>
+  <a class="hv1-cta" href="#cadastro"><span>CADASTRAR MEU ESTABELECIMENTO</span><span class="hv1-cta-icon">→</span></a>
+  <div class="hv1-features" aria-label="Benefícios da parceria">
+   <div class="hv1-feature"><span class="hv1-feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2c0-3.1 2.4-5 6-5s6 1.9 6 5v2H3Z"/><path d="M16 5c2.5.5 3.5 3.2 1.8 5.2M18 13c2.3.6 3 2.7 3 5v2h-4"/></svg></span><span>Mais clientes<br>reais</span></div>
+   <div class="hv1-feature"><span class="hv1-feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="14" width="3.5" height="7" rx="1"/><rect x="10" y="10" width="3.5" height="11" rx="1"/><rect x="17" y="5" width="3.5" height="16" rx="1"/></svg></span><span>Mais<br>movimento</span></div>
+   <div class="hv1-feature"><span class="hv1-feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.5 7.1 1-5.2 5.2 1.3 7.3L12 18.6l-6.3 3.4 1.3-7.3-5.2-5.2 7.1-1L12 2Z"/></svg></span><span>Ações e campanhas<br>exclusivas</span></div>
+  </div>
+ </div>
+</section>
 <section class="hero" aria-labelledby="main-title"><div class="shell hero-grid">
  <div class="hero-copy">
   <span class="eyebrow">PARCERIA GRATUITA PARA ESTABELECIMENTOS</span>
