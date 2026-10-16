@@ -574,6 +574,14 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
+
+@media(prefers-reduced-motion:no-preference){
+ .js-reveal .visual-reveal:not(.visual-in){opacity:0;transform:translate3d(0,18px,0)}
+ .js-reveal .visual-reveal{transition:opacity .68s cubic-bezier(.2,.8,.2,1),transform .68s cubic-bezier(.2,.8,.2,1)}
+ .js-reveal .visual-reveal.visual-in{opacity:1;transform:translate3d(0,0,0)}
+ .count-hero{animation:softLift 4s ease-in-out infinite alternate}
+ @keyframes softLift{from{translate:0 0}to{translate:0 -5px}}
+}
 </style>
 </head>
 <body>
@@ -605,7 +613,7 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
   <figure><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/itaigara.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/itaigara.webp'" alt="Imagem do Itaigara aproveitada do material original" loading="lazy"><figcaption>Itaigara</figcaption></figure>
   <figure><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/pituba.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/itaigara.webp'" alt="Fotografia do bairro da Pituba em Salvador" loading="lazy"><figcaption>Pituba</figcaption></figure>
   <figure class="ppl"><img src="https://nexa-lobo.lovable.app/images/petrobras-4k.jpg" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/petrobras.webp'" alt="Fotografia que representa profissionais do setor de petróleo, da proposta original" loading="lazy"><figcaption>Funcionários da Petrobras<span class="profile-label">Perfil de público</span></figcaption></figure>
-  <figure class="ppl"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/servidores.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85'" alt="Imagem referente a servidores públicos da Bahia, do material original" loading="lazy"><figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption></figure>
+  <figure class="ppl"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/servidores.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/servidores.webp'" alt="Imagem referente a servidores públicos da Bahia, do material original" loading="lazy"><figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption></figure>
  </div>
 </div></section>
 <section class="section offer-section" id="beneficios" aria-labelledby="h-beneficios"><div class="shell">
@@ -672,8 +680,8 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
  <h2 id="h-portfolio">Grandes marcas já fazem parte da nossa história.</h2>
  <p class="proof-intro">Conheça empresas, estabelecimentos e comunidades que participam das nossas iniciativas.</p>
  <div class="proof-grid">
-  <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-salvador.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85'" loading="lazy" alt="Fachada da Óticas Salvador no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Salvador</h3><div class="big-stat">R$ 31.428</div><div class="statline"><span>Total gerado</span><span>28 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-salvador.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
-  <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-ernesto.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85'" loading="lazy" alt="Fachada da Ernesto no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Ernesto</h3><div class="big-stat">R$ 18.762</div><div class="statline"><span>Total gerado</span><span>11 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-ernesto.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
+  <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-salvador.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/otica-salvador.webp'" loading="lazy" alt="Fachada da Óticas Salvador no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Salvador</h3><div class="big-stat">R$ 31.428</div><div class="statline"><span>Total gerado</span><span>28 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-salvador.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
+  <article class="proof-case"><div class="photo"><img src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-ernesto.webp" onerror="this.onerror=null;this.src='https://nexa-lobo.lovable.app/media/lp-oticas-hd/otica-ernesto.webp'" loading="lazy" alt="Fachada da Ernesto no material de portfólio original"></div><div class="case-body"><h3>Estabelecimento Ernesto</h3><div class="big-stat">R$ 18.762</div><div class="statline"><span>Total gerado</span><span>11 vendas</span></div><img class="mini-snapshot" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/dashboard-ernesto.webp" alt="Captura do painel de resultados do portfólio original" loading="lazy" onerror="this.style.display='none'"></div></article>
  </div>
  <p class="fine">Os números e materiais acima foram reaproveitados da proposta comercial existente. A publicação comercial definitiva depende da confirmação dos dados e autorizações de uso de marca.</p>
 </div></section>
@@ -718,6 +726,19 @@ img{height:auto;object-fit:cover;object-position:center;image-rendering:auto}
   document.getElementById('form-success').classList.add('visible');
   document.getElementById('form-success').scrollIntoView({behavior:'smooth',block:'nearest'});
  });
+})();
+</script>
+<script>
+(function(){
+ if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ if(!('IntersectionObserver' in window))return;
+ const targets=document.querySelectorAll('.target-card,.profile-images figure,.proof-case,.voucher,.handoff-card,.handoff-side,.energy-offer');
+ document.documentElement.classList.add('js-reveal');
+ targets.forEach(el=>el.classList.add('visual-reveal'));
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visual-in');observer.unobserve(entry.target);}});
+ },{threshold:.06,rootMargin:'0px 0px -28px 0px'});
+ targets.forEach(el=>observer.observe(el));
 })();
 </script>
 </body>
