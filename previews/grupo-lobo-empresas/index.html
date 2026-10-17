@@ -966,6 +966,41 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
 @media(max-width:360px){.company-benefit-grid{grid-template-columns:1fr}.company-benefit-card{min-height:180px}}
 @media(prefers-reduced-motion:reduce){.company-benefit-card{transition:none}}
 
+
+/* V11: mini fotografias de bancos de imagem (sem IA) nos benefícios empresariais */
+.company-benefit-card .benefit-photo{width:91px;height:78px;overflow:hidden;position:relative;border-radius:15px;background:#e9eff5;border:1px solid #ffffff9c;box-shadow:0 5px 14px #133d571e;margin:0 0 18px}
+.company-benefit-card .benefit-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .28s ease}
+.company-benefit-card .benefit-photo .photo-sheen{position:absolute;inset:0;border:1px solid #ffffff4d;border-radius:inherit;box-shadow:inset 0 -7px 15px #00000012;pointer-events:none}
+.company-benefit-card:hover .benefit-photo img{transform:scale(1.045)}
+.company-benefit-card:nth-child(2) .benefit-photo img{object-position:center 34%}
+.company-benefit-card:nth-child(3) .benefit-photo img{object-position:center 43%}
+.company-benefit-card .benefit-icon{display:none!important}
+.gift-secondary-row:has(.optic-benefit){grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.gift-secondary-card.optic-benefit{padding:14px 12px;gap:12px;min-height:122px;overflow:hidden}
+.gift-secondary-card .optic-visual{width:87px;height:76px;flex:0 0 87px;position:relative;background:#f5f7f7;border-radius:13px;overflow:visible}
+.gift-secondary-card .optic-store-image{height:76px;width:87px;object-fit:cover;object-position:center 24%;border-radius:13px;display:block;box-shadow:0 5px 12px #092d4817}
+.gift-secondary-card .optic-source-logo{position:absolute;right:-7px;bottom:-7px;width:43px;height:43px;border-radius:11px;background:#fff;object-fit:contain;padding:5px;border:1px solid #e5ebec;box-shadow:0 5px 12px #00000017}
+.gift-secondary-card .optic-name{min-width:0;display:flex;flex-direction:column;gap:6px}
+.gift-secondary-card .optic-name small{font-size:9px;font-weight:790;color:#627582;letter-spacing:.03em}
+.gift-secondary-card .optic-name strong{font-size:16px;color:#1c3b4b;line-height:1.1}
+.gift-secondary-card .optic-name span{font-size:11px;color:#60798b}
+.gift-secondary-row:has(.optic-benefit)>.gift-secondary-card:not(.optic-benefit){padding:14px 12px;gap:9px}
+.gift-secondary-row:has(.optic-benefit) .fuel-petro-logo{width:65px!important;max-width:65px;flex:0 0 65px!important;height:54px!important}
+.gift-secondary-row:has(.optic-benefit)>.gift-secondary-card:not(.optic-benefit)>div strong{font-size:17px}
+@media(max-width:960px){.gift-secondary-row:has(.optic-benefit){grid-template-columns:repeat(2,minmax(0,1fr))}.gift-secondary-row:has(.optic-benefit)>.gift-secondary-card:last-child{grid-column:span 2}}
+@media(max-width:640px){
+ .company-benefit-card .benefit-photo{width:78px;height:68px;margin-bottom:16px;border-radius:13px}
+ .gift-secondary-row:has(.optic-benefit){grid-template-columns:1fr;gap:11px}
+ .gift-secondary-row:has(.optic-benefit)>.gift-secondary-card:last-child{grid-column:auto}
+ .gift-secondary-card.optic-benefit{min-height:105px;padding:12px 15px;gap:18px}
+ .gift-secondary-card .optic-visual{width:95px;height:74px;flex-basis:95px}
+ .gift-secondary-card .optic-store-image{width:95px;height:74px}
+ .gift-secondary-card .optic-name strong{font-size:18px}
+ .gift-secondary-card .optic-name small{font-size:10px}
+ .gift-secondary-row:has(.optic-benefit) .fuel-petro-logo{width:105px!important;max-width:105px;flex:0 0 105px!important}
+}
+@media(prefers-reduced-motion:reduce){.company-benefit-card .benefit-photo img{transition:none}}
+
 </style>
 </head>
 <body>
@@ -1013,10 +1048,10 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
 <div class="section-kicker"><span class="stepnum">01.</span><span>BENEFÍCIOS PARA O SEU NEGÓCIO</span></div>
 <div class="company-benefits-heading"><div><h2 id="h-empresa">O que sua <span class="strong-blue">empresa ganha?</span></h2><p class="company-lead"><strong>Mais clientes, mais divulgação e mais oportunidades de aumentar o faturamento.</strong> O Clube VIP conecta sua empresa a novos consumidores, sem cobrar nada para participar.</p></div><span class="company-pill"><span aria-hidden="true">✓</span> 100% gratuito para participar</span></div>
 <div class="company-benefit-grid">
- <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20v-2c0-3 2-5 5.5-5s5.5 2 5.5 5v2M17 6a3 3 0 0 1 1 5.6M17.2 13.5c2.4.8 3.2 2.7 3.2 4.5V20"/><path d="m18 3 .6 1.4L20 5l-1.4.6L18 7l-.6-1.4L16 5l1.4-.6Z"/></svg></div><h3>Mais oportunidades de clientes</h3><p>Apresente sua empresa a consumidores da nossa comunidade que podem conhecer e escolher seu estabelecimento.</p></article>
- <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5v3a2 2 0 0 0 2 2h2l2 5h3l-2.3-5H12l8 4V5.5l-8 5H5a2 2 0 0 0-2 2Zm6-1v7"/></svg></div><h3>Divulgação da sua marca</h3><p>Ganhe espaço para divulgar ofertas, produtos e serviços nas nossas campanhas e comunidades, conforme as metas.</p></article>
- <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="3"/><path d="m17 10 4-3v10l-4-3"/><path d="m9 10 3 2-3 2v-4Z"/></svg></div><h3>Conteúdo profissional</h3><p>As metas podem liberar visitas de criadores, gravações e material para fortalecer suas redes sociais.</p></article>
- <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V5M4 20h16M8 16l4-5 3 2 5-7"/><path d="M16 6h4v4"/></svg></div><h3>Oportunidade de vender mais</h3><p>Transforme o alcance das ações em interesse pelo seu negócio e novas oportunidades de faturamento.</p></article>
+ <article class="company-benefit-card"><div class="benefit-photo"><img src="https://images.pexels.com/photos/3907119/pexels-photo-3907119.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Fotografia real de cliente e atendente durante uma compra no comércio" loading="lazy" decoding="async" width="180" height="150"><span class="photo-sheen" aria-hidden="true"></span></div><h3>Mais oportunidades de clientes</h3><p>Apresente sua empresa a consumidores da nossa comunidade que podem conhecer e escolher seu estabelecimento.</p></article>
+ <article class="company-benefit-card"><div class="benefit-photo"><img src="https://images.pexels.com/photos/12432697/pexels-photo-12432697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Fotografia real de criadora digital divulgando conteúdo pelo celular" loading="lazy" decoding="async" width="180" height="150"><span class="photo-sheen" aria-hidden="true"></span></div><h3>Divulgação da sua marca</h3><p>Ganhe espaço para divulgar ofertas, produtos e serviços nas nossas campanhas e comunidades, conforme as metas.</p></article>
+ <article class="company-benefit-card"><div class="benefit-photo"><img src="https://images.pexels.com/photos/28728925/pexels-photo-28728925.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Fotografia real de videomaker operando câmera profissional" loading="lazy" decoding="async" width="180" height="150"><span class="photo-sheen" aria-hidden="true"></span></div><h3>Conteúdo profissional</h3><p>As metas podem liberar visitas de criadores, gravações e material para fortalecer suas redes sociais.</p></article>
+ <article class="company-benefit-card"><div class="benefit-photo"><img src="https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Fotografia real de compras e pagamento no caixa de um comércio" loading="lazy" decoding="async" width="180" height="150"><span class="photo-sheen" aria-hidden="true"></span></div><h3>Oportunidade de vender mais</h3><p>Transforme o alcance das ações em interesse pelo seu negócio e novas oportunidades de faturamento.</p></article>
 </div>
 <div class="company-benefits-next"><div><strong>Você não precisa investir para entrar.</strong><span>Veja abaixo o público ao qual sua empresa poderá ser apresentada.</span></div><a href="#assinantes">Conheça nossa comunidade <span aria-hidden="true">→</span></a></div>
 </div></section>
@@ -1064,7 +1099,12 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
    <article class="gift-ticket ticket-atacadao"><div class="ticket-top"><span class="ticket-label">VALE-COMPRAS</span><span class="ticket-symbol" aria-hidden="true">✦</span></div><div class="ticket-merchant ticket-merchant-img"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Atacad%C3%A3o_logo.svg" alt="Logomarca oficial Atacadão" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">Atacadão</b></div><div class="ticket-amount">R$ <strong>500</strong></div><div class="ticket-footer">Exemplo de campanha VIP</div></article>
   </div>
   <div class="gift-secondary-row">
-   <div class="gift-secondary-card"><span class="gift-secondary-icon" aria-hidden="true">◈</span><div><small>BENEFÍCIOS EM ÓTICAS</small><strong>Óticas Salvador e Ernesto</strong><span>Vouchers VIP</span></div></div>
+   <div class="gift-secondary-card optic-benefit">
+    <div class="optic-visual"><img class="optic-store-image" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-salvador.webp" alt="Fotografia real da fachada da Ótica Salvador" loading="lazy" decoding="async"><img class="optic-source-logo" src="https://www.oticassalvador.com.br/favicon.ico" alt="Símbolo da Ótica Salvador divulgado no site oficial" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.display='none'"></div>
+    <div class="optic-name"><small>BENEFÍCIOS EM ÓTICAS</small><strong>Ótica Salvador</strong><span>Vouchers VIP</span></div></div>
+   <div class="gift-secondary-card optic-benefit">
+    <div class="optic-visual"><img class="optic-store-image" src="https://raw.githubusercontent.com/ocaiolobo/achou-landing/preview-grupo-lobo-empresas/previews/grupo-lobo-empresas/assets/otica-ernesto.webp" alt="Fotografia real da fachada da Ótica Ernesto" loading="lazy" decoding="async"><img class="optic-source-logo" src="https://www.oticasernesto.com/favicon.ico" alt="Símbolo da Ótica Ernesto divulgado no site oficial" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.display='none'"></div>
+    <div class="optic-name"><small>BENEFÍCIOS EM ÓTICAS</small><strong>Ótica Ernesto</strong><span>Vouchers VIP</span></div></div>
    <div class="gift-secondary-card"><img class="fuel-petro-logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrobras_horizontal_logo.svg" loading="lazy" alt="Logomarca original Petrobras" onerror="this.style.display='none'"><div><small>COMBUSTÍVEL</small><strong>R$ 200</strong><span>Postos Petrobras participantes</span></div></div>
   </div>
  </div>
