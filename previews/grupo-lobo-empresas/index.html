@@ -1001,10 +1001,13 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
 }
 @media(prefers-reduced-motion:reduce){.company-benefit-card .benefit-photo img{transition:none}}
 
+
+/* Ajustes limitados ao cadastro real e ao fallback da logomarca Brahma */
+.vip-honeypot{position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0}.consent-label{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.5;color:#53687a;font-weight:500}.consent-label input{width:18px;height:18px;flex:0 0 18px;margin-top:2px}.form-error{margin-top:12px;padding:12px 15px;background:#fff0ef;border:1px solid #efc2be;border-radius:13px;color:#a22f28;font-size:13px}.form-error[hidden]{display:none}.camarote-brand-safe[hidden]{display:none!important}.camarote-brand-safe{display:flex;flex-direction:column;gap:0;align-items:center;color:#b51d25;font-weight:900}.camarote-brand-safe strong{font-size:30px;line-height:1.1;color:#b51d25}.camarote-brand-safe small{font-size:11px;letter-spacing:.09em;color:#b51d25}
 </style>
 </head>
 <body>
-<div class="preview">PRÉVIA COMERCIAL • texto, imagens e formulário em validação • cadastros não são enviados</div>
+<div class="preview">CLUBE VIP • Apresentação para empresas • Cadastro disponível</div>
 <header class="header">
  <div class="shell head-inner"><a class="brand" href="#top" aria-label="Clube VIP, voltar ao início"><span class="brand-mark">VIP</span> Clube <span class="vip">VIP</span></a><a class="button small" href="#cadastro">Credenciar empresa →</a></div>
 </header>
@@ -1111,7 +1114,7 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
  <div class="camarote-board" aria-label="Referências visuais de experiências do Carnaval de Salvador">
   <div class="camarote-board-head"><div><span class="gift-kicker">EXPERIÊNCIAS DO CARNAVAL DE SALVADOR</span><h4>Camarotes que todo mundo reconhece.</h4></div><span class="camarote-tag">EXEMPLOS VISUAIS</span></div>
   <div class="camarote-brands camarote-real-logos">
-  <div class="camarote-brand-card brand-brahma" role="img" aria-label="Camarote Brahma Salvador"><div class="camarote-brand-logo"><img loading="lazy" src="https://camarotebrahmasalvador.com.br/wp-content/uploads/2023/09/cropped-cropped-Logo-Camarote_red.png" alt="Identidade visual do Camarote Brahma Salvador" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
+  <div class="camarote-brand-card brand-brahma" role="img" aria-label="Camarote Brahma Salvador"><div class="camarote-brand-logo"><img loading="lazy" src="https://camarotebrahmasalvador.com.br/wp-content/uploads/2023/09/cropped-cropped-Logo-Camarote_red.png" alt="Logomarca original do Camarote Brahma Salvador" onerror="if(!this.dataset.tried){this.dataset.tried='yes';this.src='https://www.camarotebrahmasalvador.com.br/wp-content/uploads/2023/09/cropped-cropped-Logo-Camarote_red.png'}else{this.style.display='none';this.nextElementSibling.hidden=false}"><span class="camarote-brand-safe" hidden aria-hidden="true"><small>CAMAROTE</small><strong>BRAHMA</strong><small>SALVADOR</small></span></div></div>
   <div class="camarote-brand-card brand-salvador" role="img" aria-label="Camarote Salvador"><div class="camarote-brand-logo"><img loading="lazy" src="https://static.wixstatic.com/media/0901b0_c1f706694e7b4033819bd83ce793b33f~mv2.png/v1/fill/w_375%2Ch_375%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/LOGO%202026%20PRETO.png" alt="Identidade visual do Camarote Salvador" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
   <div class="camarote-brand-card brand-club" role="img" aria-label="Camarote Club"><div class="camarote-brand-logo"><img loading="lazy" src="https://static.wixstatic.com/media/cbe3ed_6c87eabebba348209948e3f5bb885d7b~mv2.png/v1/crop/x_0%2Cy_47%2Cw_596%2Ch_740/fill/w_241%2Ch_296%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/MARCA%20VERTICAL%20EM%20BRANCO_CAMAROTE%20CLUB.png" alt="Identidade visual do Camarote Club" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
   <div class="camarote-brand-card brand-harem" role="img" aria-label="Camarote Harém Soho"><div class="camarote-brand-logo"><img loading="lazy" src="https://cdn.queroabada.com.br/upload/large-harem-071125.webp" alt="Identidade visual do Camarote Harém Soho" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
@@ -1203,39 +1206,53 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
  <div class="application-panel"><h3>Cadastrar meu estabelecimento</h3>
   <form id="vip-form">
    <div class="form-grid">
-    <div class="field wide"><label for="company-logo">Logomarca da empresa *</label><label class="logo-drop" for="company-logo" id="upload-box"><svg class="camera" viewBox="0 0 24 24" fill="none" stroke="#2676de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h-4l-2 3H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4l-2-3Z"/><circle cx="12" cy="13" r="4"/></svg><img id="logo-preview" class="upload-preview" alt="Logomarca selecionada"><span id="upload-caption">Selecionar logomarca</span><input id="company-logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"></label></div>
+    <div class="field wide"><label for="company-logo">Logomarca da empresa *</label><label class="logo-drop" for="company-logo" id="upload-box"><svg class="camera" viewBox="0 0 24 24" fill="none" stroke="#2676de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h-4l-2 3H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4l-2-3Z"/><circle cx="12" cy="13" r="4"/></svg><img id="logo-preview" class="upload-preview" alt="Logomarca selecionada"><span id="upload-caption">Selecionar logomarca</span><input id="company-logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp" required></label></div>
     <div class="field wide"><label for="company-name">Nome da empresa *</label><input id="company-name" required maxlength="130" autocomplete="organization" placeholder="Ex.: Minha empresa"></div>
     <div class="field wide"><label for="company-address">Endereço *</label><input id="company-address" required maxlength="200" autocomplete="street-address" placeholder="Rua, número, bairro e cidade"></div>
     <div class="field"><label for="manager-name">Nome do responsável *</label><input id="manager-name" required maxlength="100" autocomplete="name" placeholder="Nome completo"></div>
     <div class="field"><label for="manager-whatsapp">WhatsApp para comunicação *</label><input id="manager-whatsapp" required inputmode="tel" type="tel" minlength="10" maxlength="20" autocomplete="tel" placeholder="(71) 99999-9999"></div>
     <div class="field wide"><label for="business-discount">Percentual de desconto ou benefício exclusivo (opcional)</label><input id="business-discount" maxlength="150" placeholder="Ex.: 15% nos serviços ou uma oferta exclusiva"><span class="hint">Este campo é facultativo.</span></div>
    </div>
+   <div class="field wide consent-field"><label class="consent-label"><input id="company-consent" type="checkbox" required> Autorizo o Clube VIP a utilizar meus dados e a logomarca para analisar este cadastro e entrar em contato comigo por WhatsApp.</label></div><input name="website" id="website-check" type="text" class="vip-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
    <div class="form-actions"><button class="button" type="submit">QUERO CADASTRAR MEU ESTABELECIMENTO <span class="arrow">→</span></button></div>
-   <p class="form-status">Prévia de layout: nenhum cadastro ou logomarca será enviado ou armazenado nesta versão.</p>
-   <div id="form-success" class="form-success" role="status">O formulário foi preenchido. Esta é apenas uma demonstração visual: o envio real do cadastro ainda precisa de integração.</div>
+   <p class="form-status">Cadastro gratuito. Os dados serão utilizados somente para analisar o credenciamento e entrar em contato.</p>
+   <div id="form-success" class="form-success" role="status" aria-live="polite">✓ Cadastro concluído! Recebemos seus dados e sua logomarca. Nossa equipe entrará em contato pelo WhatsApp.</div><div id="form-error" class="form-error" role="alert" hidden></div>
   </form>
  </div>
 </div></section>
 </main>
-<footer class="footer"><div class="shell"><b>Clube VIP • Prévia comercial para avaliação</b><br>Fotografias reais de bancos de imagem e imagens do acervo da proposta NEXA. As imagens ilustrativas não comprovam parcerias. <a href="#top">Voltar ao início ↑</a></div></footer>
+<footer class="footer"><div class="shell"><b>Clube VIP • Parceria gratuita com estabelecimentos</b><br>Fotografias reais de bancos de imagem e imagens do acervo da proposta NEXA. As imagens ilustrativas não comprovam parcerias. <a href="#top">Voltar ao início ↑</a></div></footer>
 <script>
 (function(){
- const logo=document.getElementById('company-logo');
- const preview=document.getElementById('logo-preview');
- const box=document.getElementById('upload-box');
- let oldURL=null;
- logo.addEventListener('change',function(){
-  if(oldURL) URL.revokeObjectURL(oldURL);
-  const file=this.files&&this.files[0];
-  if(!file){box.classList.remove('uploaded');return;}
-  if(!file.type.startsWith('image/')){alert('Selecione uma imagem de logomarca.');this.value='';return;}
-  oldURL=URL.createObjectURL(file);preview.src=oldURL;box.classList.add('uploaded');document.getElementById('upload-caption').textContent=file.name;
+ const fileInput=document.getElementById('company-logo'),form=document.getElementById('vip-form'),box=document.getElementById('upload-box'),preview=document.getElementById('logo-preview');
+ const button=form.querySelector('button[type="submit"]'),success=document.getElementById('form-success'),error=document.getElementById('form-error');
+ let temp=null;
+ fileInput.addEventListener('change',function(){
+  if(temp)URL.revokeObjectURL(temp);box.classList.remove('uploaded');
+  const file=this.files?.[0];if(!file)return;
+  if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>2097152){alert('Logomarca: envie JPG, PNG ou WebP, até 2 MB.');this.value='';return}
+  temp=URL.createObjectURL(file);preview.src=temp;box.classList.add('uploaded');document.getElementById('upload-caption').textContent=file.name;
  });
- document.getElementById('vip-form').addEventListener('submit',function(e){
-  e.preventDefault();
-  if(!logo.files||!logo.files[0]){alert('Selecione a logomarca para visualizar o cadastro.');logo.focus();return;}
-  document.getElementById('form-success').classList.add('visible');
-  document.getElementById('form-success').scrollIntoView({behavior:'smooth',block:'nearest'});
+ form.addEventListener('submit',async function(ev){
+  ev.preventDefault();if(!form.reportValidity())return;
+  error.hidden=true;success.classList.remove('visible');
+  const prev=button.innerHTML;button.disabled=true;button.textContent='ENVIANDO…';
+  try{
+   const fd=new FormData();
+   const keys={'company_name':'company-name','company_address':'company-address','manager_name':'manager-name','manager_whatsapp':'manager-whatsapp','business_discount':'business-discount'};
+   for(const [k,id] of Object.entries(keys))fd.set(k,document.getElementById(id).value);
+   fd.set('consent',document.getElementById('company-consent').checked?'yes':'no');
+   fd.set('logo',fileInput.files[0],fileInput.files[0].name);
+   fd.set('website',document.getElementById('website-check').value);
+   const indicator=new URLSearchParams(location.search).get('indicador');
+   if(indicator)fd.set('indicator',indicator);
+   const res=await fetch('https://ilrbhxbnfyraptrflahb.supabase.co/functions/v1/clube-vip-cadastro',{method:'POST',body:fd,cache:'no-store'});
+   const data=await res.json().catch(()=>({}));
+   if(!res.ok||!data.ok||data.status!=='concluido'||!data.id)throw Error(data.error==='too_many_submissions'?'Você já realizou muitos envios. Tente novamente mais tarde.':'Não foi possível confirmar o cadastro. Tente novamente.');
+   form.reset();box.classList.remove('uploaded');document.getElementById('upload-caption').textContent='Selecionar logomarca';
+   success.classList.add('visible');success.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }catch(e){error.hidden=false;error.textContent=String(e.message||'Falha no envio. Tente novamente.');error.scrollIntoView({behavior:'smooth',block:'nearest'})}
+  finally{button.disabled=false;button.innerHTML=prev}
  });
 })();
 </script>
