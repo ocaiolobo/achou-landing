@@ -922,6 +922,50 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
 }
 @media(prefers-reduced-motion:reduce){.gift-ticket{transition:none}}
 
+
+/* V10: Hierarquia clara para empresário — benefícios / audiência / equipe / contrapartida / metas */
+.company-benefits{background:#fff}
+.company-benefits-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.company-benefits h2,.employee-benefits h2,.campaign-targets h2{font-size:clamp(34px,4.5vw,52px);letter-spacing:-.065em;line-height:1.1;margin:4px 0 17px;font-weight:830;color:#17283c}
+.company-lead{max-width:750px;font-size:clamp(16px,2vw,20px);line-height:1.63;color:#586a78;letter-spacing:-.02em;margin:0}
+.company-lead strong{color:#263c4b;font-weight:760}
+.company-pill{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:750;color:#0a774f;background:#eafbf0;border:1px solid #caebd5;white-space:nowrap;padding:12px 16px;border-radius:99px}
+.company-pill span{color:#109b62}
+.company-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.company-benefit-card{min-height:260px;padding:23px 19px 21px;border-radius:23px;background:#f9fbfe;border:1px solid #e5ecf5;box-shadow:0 10px 27px #1435590b;transition:box-shadow .22s ease,transform .22s ease}
+.company-benefit-card:nth-child(2){background:#f7fbff}.company-benefit-card:nth-child(3){background:#fffdf5}.company-benefit-card:nth-child(4){background:#f8fcf9}
+.company-benefit-card:hover{box-shadow:0 17px 36px #173a561a;transform:translateY(-3px)}
+.company-benefit-card .benefit-icon{height:53px;width:53px;display:grid;place-items:center;background:#e6f0ff;color:#2474cd;border-radius:16px;margin-bottom:19px}
+.company-benefit-card:nth-child(3) .benefit-icon{background:#fff2be;color:#9e790f}
+.company-benefit-card:nth-child(4) .benefit-icon{background:#e6f7ec;color:#168054}
+.company-benefit-card .benefit-icon svg{width:29px;height:29px}
+.company-benefit-card h3{font-size:17px;line-height:1.22;letter-spacing:-.037em;color:#1d3546;font-weight:810;margin:0 0 12px}
+.company-benefit-card p{font-size:13px;line-height:1.56;color:#647483;margin:0}
+.company-benefits-next{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:27px;background:linear-gradient(100deg,#fff8df,#fffbef);border:1px solid #f6eac2;border-radius:19px;padding:20px 23px}
+.company-benefits-next strong{display:block;font-size:16px;color:#273d4b}
+.company-benefits-next span{display:block;font-size:12px;color:#617180;margin-top:4px}
+.company-benefits-next a{font-weight:780;font-size:13px;flex:0 0 auto;color:#2175ce;text-decoration:none}
+.employee-benefits{background:#fff}
+.employee-benefits .deal-summary.energy-offer{margin:27px 0 33px}
+.employee-benefits .gifts-title{margin:42px 0 10px}
+.employee-benefits .gifts-sub{max-width:780px}
+.campaign-targets{background:#f5f9ff}
+.campaign-targets .target-grid{margin-top:29px}
+.campaign-targets .target-card{background:#fff}
+.campaign-targets .target-cta{margin-top:28px}
+.camarote-real-logos .camarote-brand-card{min-height:152px;justify-content:center;background:#fff;border-color:#dfe7ec;box-shadow:0 9px 25px #11314b0b}
+.camarote-real-logos .camarote-brand-card .camarote-brand-logo{flex:1;min-height:145px;align-items:center;justify-content:center;padding:18px}
+.camarote-real-logos .camarote-brand-card .camarote-brand-logo img{width:100%;max-width:190px;height:93px;max-height:93px;object-fit:contain}
+.camarote-real-logos .brand-club .camarote-brand-logo{background:#0c3149;border-radius:15px;margin:4px}
+.camarote-real-logos .brand-club .camarote-brand-logo img{max-height:100px}
+.camarote-real-logos .brand-harem .camarote-brand-logo img{max-height:110px}
+.camarote-real-logos .brand-brahma .camarote-brand-logo img{max-height:106px}
+.camarote-real-logos .camarote-brand-card>span{display:none!important}
+@media(max-width:980px){.company-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.company-benefit-card{min-height:220px}.company-benefits-heading{align-items:start;flex-direction:column;gap:12px}}
+@media(max-width:620px){.company-benefit-grid{gap:9px}.company-benefit-card{padding:18px 13px;min-height:240px;border-radius:18px}.company-benefit-card .benefit-icon{height:43px;width:43px;border-radius:12px;margin-bottom:15px}.company-benefit-card .benefit-icon svg{height:23px;width:23px}.company-benefit-card h3{font-size:15px}.company-benefit-card p{font-size:11.5px;line-height:1.55}.company-benefits-next{align-items:start;flex-direction:column;gap:10px;padding:17px;border-radius:16px}.company-benefits-next a{font-size:12px}.company-pill{font-size:12px}.camarote-real-logos .camarote-brand-card{min-height:128px}.camarote-real-logos .camarote-brand-card .camarote-brand-logo{min-height:122px;padding:13px}.camarote-real-logos .camarote-brand-card .camarote-brand-logo img{max-height:90px}.company-benefits h2,.employee-benefits h2,.campaign-targets h2{font-size:34px}}
+@media(max-width:360px){.company-benefit-grid{grid-template-columns:1fr}.company-benefit-card{min-height:180px}}
+@media(prefers-reduced-motion:reduce){.company-benefit-card{transition:none}}
+
 </style>
 </head>
 <body>
@@ -965,8 +1009,19 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
   <div class="floating"><div class="float"><small>Para sua marca</small><b>Mais divulgação e clientes</b></div><div class="float yellow"><small>Seu investimento</small><b>R$ 0 para participar</b></div></div>
  </div></div>
 </div><div class="shell v2-perks"><div><b>↗</b><span>Mais clientes reais</span></div><div><b>▥</b><span>Mais movimento</span></div><div><b>✦</b><span>Ações e campanhas exclusivas</span></div></div></section>
+<section class="section company-benefits" id="empresa" aria-labelledby="h-empresa"><div class="shell">
+<div class="section-kicker"><span class="stepnum">01.</span><span>BENEFÍCIOS PARA O SEU NEGÓCIO</span></div>
+<div class="company-benefits-heading"><div><h2 id="h-empresa">O que sua <span class="strong-blue">empresa ganha?</span></h2><p class="company-lead"><strong>Mais clientes, mais divulgação e mais oportunidades de aumentar o faturamento.</strong> O Clube VIP conecta sua empresa a novos consumidores, sem cobrar nada para participar.</p></div><span class="company-pill"><span aria-hidden="true">✓</span> 100% gratuito para participar</span></div>
+<div class="company-benefit-grid">
+ <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20v-2c0-3 2-5 5.5-5s5.5 2 5.5 5v2M17 6a3 3 0 0 1 1 5.6M17.2 13.5c2.4.8 3.2 2.7 3.2 4.5V20"/><path d="m18 3 .6 1.4L20 5l-1.4.6L18 7l-.6-1.4L16 5l1.4-.6Z"/></svg></div><h3>Mais oportunidades de clientes</h3><p>Apresente sua empresa a consumidores da nossa comunidade que podem conhecer e escolher seu estabelecimento.</p></article>
+ <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5v3a2 2 0 0 0 2 2h2l2 5h3l-2.3-5H12l8 4V5.5l-8 5H5a2 2 0 0 0-2 2Zm6-1v7"/></svg></div><h3>Divulgação da sua marca</h3><p>Ganhe espaço para divulgar ofertas, produtos e serviços nas nossas campanhas e comunidades, conforme as metas.</p></article>
+ <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="3"/><path d="m17 10 4-3v10l-4-3"/><path d="m9 10 3 2-3 2v-4Z"/></svg></div><h3>Conteúdo profissional</h3><p>As metas podem liberar visitas de criadores, gravações e material para fortalecer suas redes sociais.</p></article>
+ <article class="company-benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V5M4 20h16M8 16l4-5 3 2 5-7"/><path d="M16 6h4v4"/></svg></div><h3>Oportunidade de vender mais</h3><p>Transforme o alcance das ações em interesse pelo seu negócio e novas oportunidades de faturamento.</p></article>
+</div>
+<div class="company-benefits-next"><div><strong>Você não precisa investir para entrar.</strong><span>Veja abaixo o público ao qual sua empresa poderá ser apresentada.</span></div><a href="#assinantes">Conheça nossa comunidade <span aria-hidden="true">→</span></a></div>
+</div></section>
 <section class="section soft showcase" id="assinantes" aria-labelledby="h-assinantes"><div class="shell">
- <div class="profile-head"><div><div class="section-kicker"><span class="stepnum">01.</span><span>COMUNIDADE CLUBE VIP</span></div><h2 id="h-assinantes">Onde estão nossos assinantes?</h2></div>
+ <div class="profile-head"><div><div class="section-kicker"><span class="stepnum">02.</span><span>COMUNIDADE CLUBE VIP</span></div><h2 id="h-assinantes">Onde estão seus <span class="strong-blue">futuros clientes?</span></h2></div>
  <div class="count-hero"><b>+30 mil</b><small>pessoas na nossa comunidade</small></div></div>
  <p class="description narrow-copy"><b>Condomínios:</b> Horto Florestal, Itaigara, Pituba e outros bairros de Salvador.<br><b>Nosso público:</b> funcionários da Petrobras, servidores públicos da Bahia e colaboradores de empresas parceiras.</p>
  <div class="profile-images">
@@ -987,31 +1042,16 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
   </figure>
  </div>
 </div></section>
-<section class="section offer-section" id="beneficios" aria-labelledby="h-beneficios"><div class="shell">
- <div class="section-kicker"><span class="stepnum">02.</span><span>O QUE SUA EMPRESA GANHA</span></div>
- <h2 id="h-beneficios">O que seu estabelecimento ganha?</h2>
- <p class="punch">Mais divulgação, novos clientes e oportunidades de aumentar seu faturamento. <span class="strong-blue">Sem nenhum investimento.</span></p>
+
+<section class="section employee-benefits" id="beneficios" aria-labelledby="h-beneficios"><div class="shell">
+<div class="section-kicker"><span class="stepnum">03.</span><span>BENEFÍCIOS PARA SEUS COLABORADORES</span></div>
+<h2 id="h-beneficios">O que seus <span class="strong-blue">funcionários ganham?</span></h2>
+<p class="punch">Seus colaboradores podem economizar na conta de luz e participar das campanhas especiais do Clube VIP. <span class="strong-blue">Sem custo de adesão.</span></p>
  <div class="deal-summary energy-offer">
   <div><h3>Ofereça aos seus colaboradores a oportunidade de economizar na conta de luz, <em>gratuitamente.</em></h3></div>
   <div class="deal-savings"><span class="percentage">até 30%</span><b>de economia na conta de luz</b></div>
  </div>
- <p class="big-guidance">Quanto mais contas de luz credenciadas dos colaboradores, <span class="strong-blue">mais divulgação sua empresa conquista!</span></p>
- <div class="target-grid">
-  <article class="target-card">
-   <div class="target-pic"><img src="https://images.pexels.com/photos/15119167/pexels-photo-15119167.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
-   <div class="target-content"><div class="value">R$ 5 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa ganha</h3>
-    <ul><li><span><b>1 criador de conteúdo</b> para visitar, gravar e divulgar seu estabelecimento.</span></li><li><span>Divulgação especial na comunidade do Clube VIP.</span></li><li><span>Conteúdo profissional para publicar nas suas redes sociais.</span></li></ul>
-   </div>
-  </article>
-  <article class="target-card premium">
-   <div class="target-pic"><img src="https://images.pexels.com/photos/9809838/pexels-photo-9809838.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
-   <div class="target-content"><div class="value">R$ 10 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa conquista ainda mais</h3>
-    <ul><li><span><b>Mais 1 criador de conteúdo</b> para divulgar seu negócio.</span></li><li><span><b>15 dias em destaque</b> nas comunidades do Clube VIP.</span></li><li><span>Publicações nos grupos dos condomínios em que atuamos.</span></li><li><span>Campanha com <b>tráfego pago</b> para impulsionar sua marca.</span></li><li><span>Divulgação especial de ofertas, produtos e serviços.</span></li></ul>
-   </div>
-  </article>
- </div>
- <div class="accumulation"><b>As premiações são cumulativas!</b> Ao atingir R$ 10 mil, sua empresa recebe os benefícios das duas metas.</div>
- <p class="fine">As metas representam a soma dos valores mensais das contas de luz credenciadas dos colaboradores, não a quantidade de funcionários. Campanhas conforme regulamento.</p>
+
  <h3 class="gifts-title">Benefícios especiais para seus colaboradores</h3>
  <p class="gifts-sub">Além da economia na energia, acesso a campanhas de vale-compras, vouchers e experiências do Clube VIP.</p>
 
@@ -1030,24 +1070,16 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
  </div>
  <div class="camarote-board" aria-label="Referências visuais de experiências do Carnaval de Salvador">
   <div class="camarote-board-head"><div><span class="gift-kicker">EXPERIÊNCIAS DO CARNAVAL DE SALVADOR</span><h4>Camarotes que todo mundo reconhece.</h4></div><span class="camarote-tag">EXEMPLOS VISUAIS</span></div>
-  <div class="camarote-brands">
-   <div class="camarote-brand-card"><div class="camarote-brand-logo"><img loading="lazy" src="https://camarotebrahmasalvador.com.br/wp-content/uploads/2023/09/cropped-cropped-Logo-Camarote_red.png" alt="Logo Camarote Brahma Salvador, disponível no site oficial" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><strong style="display:none">BRAHMA SALVADOR</strong></div><span>Camarote Brahma Salvador</span></div>
-   <div class="camarote-brand-card"><div class="camarote-brand-logo logo-salvador"><strong>Camarote <b>SALVADOR</b></strong></div><span>Camarote Salvador</span></div>
-   <div class="camarote-brand-card"><div class="camarote-brand-logo logo-club"><strong>CAMAROTE <b>CLUB</b></strong></div><span>Camarote Club</span></div>
-   <div class="camarote-brand-card"><div class="camarote-brand-logo logo-harem"><strong>HARÉM <b>SOHO</b></strong></div><span>Camarote Harém Soho</span></div>
+  <div class="camarote-brands camarote-real-logos">
+  <div class="camarote-brand-card brand-brahma" role="img" aria-label="Camarote Brahma Salvador"><div class="camarote-brand-logo"><img loading="lazy" src="https://camarotebrahmasalvador.com.br/wp-content/uploads/2023/09/cropped-cropped-Logo-Camarote_red.png" alt="Identidade visual do Camarote Brahma Salvador" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
+  <div class="camarote-brand-card brand-salvador" role="img" aria-label="Camarote Salvador"><div class="camarote-brand-logo"><img loading="lazy" src="https://static.wixstatic.com/media/0901b0_c1f706694e7b4033819bd83ce793b33f~mv2.png/v1/fill/w_375%2Ch_375%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/LOGO%202026%20PRETO.png" alt="Identidade visual do Camarote Salvador" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
+  <div class="camarote-brand-card brand-club" role="img" aria-label="Camarote Club"><div class="camarote-brand-logo"><img loading="lazy" src="https://static.wixstatic.com/media/cbe3ed_6c87eabebba348209948e3f5bb885d7b~mv2.png/v1/crop/x_0%2Cy_47%2Cw_596%2Ch_740/fill/w_241%2Ch_296%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/MARCA%20VERTICAL%20EM%20BRANCO_CAMAROTE%20CLUB.png" alt="Identidade visual do Camarote Club" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
+  <div class="camarote-brand-card brand-harem" role="img" aria-label="Camarote Harém Soho"><div class="camarote-brand-logo"><img loading="lazy" src="https://cdn.queroabada.com.br/upload/large-harem-071125.webp" alt="Identidade visual do Camarote Harém Soho" onerror="this.closest('.camarote-brand-card').style.display='none'"></div></div>
   </div>
   <p class="camarote-disclaimer">Referências de eventos do Carnaval de Salvador, sem indicação de vínculo comercial, parceria ou ingresso confirmado. Experiências eventualmente ofertadas dependerão do regulamento da campanha.</p>
  </div>
  <p class="voucher-note">Quadro ilustrativo de campanhas do Clube VIP. Benefícios, marcas e experiências não constituem promessa de prêmio nem confirmação de parceria. Resgate sujeito ao regulamento e à disponibilidade.</p>
-</div></section>
-<section class="section winner prize-feature" id="premiacao" aria-labelledby="h-premiacao"><div class="shell winner-wrap">
- <div><div class="section-kicker"><span class="stepnum">03.</span><span>PRÊMIO ESPECIAL</span></div>
- <h2 id="h-premiacao">Sua marca divulgada por um influenciador de <b>até 1 milhão de seguidores!</b></h2>
- <p class="speaker">Além das premiações por metas, o estabelecimento que mais credenciar contas de luz dos colaboradores durante a campanha poderá ganhar <b>uma visita e uma publicação especial de um influenciador.</b></p>
- <p class="punch">Mais visibilidade para sua marca e novas oportunidades de negócios!</p>
- <p class="fine">Premiação sujeita ao regulamento e à disponibilidade do influenciador.</p>
- </div>
- <div class="winner-image"><img src="https://images.pexels.com/photos/8370744/pexels-photo-8370744.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia real de criadora de conteúdo para representar campanha com influenciador" loading="lazy"><div class="winner-sticker">Campanha especial <b>até 1 milhão</b> de seguidores</div></div>
+
 </div></section>
 <section class="section soft process-section" id="contrapartida" aria-labelledby="h-contrapartida"><div class="shell">
  <div class="section-kicker"><span class="stepnum">04.</span><span>SIMPLIFICAMOS TUDO</span></div>
@@ -1062,8 +1094,43 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
   <div class="handoff-side"><h3>E o restante? É com a gente!</h3><p>Apresentamos o benefício, esclarecemos dúvidas e acompanhamos todos os interessados.</p><div class="closing">Simples, 100% gratuito e sem interromper sua operação.</div></div>
  </div>
 </div></section>
+
+<section class="section campaign-targets" id="metas" aria-labelledby="h-metas"><div class="shell">
+<div class="section-kicker"><span class="stepnum">05.</span><span>PREMIAÇÕES POR RESULTADOS</span></div>
+<h2 id="h-metas">Quanto mais sua empresa credencia, <span class="strong-blue">mais divulgação ela ganha.</span></h2>
+<p class="punch">Você organiza as reuniões, nossa equipe acompanha os interessados e sua empresa avança nas metas de divulgação.</p>
+ <p class="big-guidance">Quanto mais contas de luz credenciadas dos colaboradores, <span class="strong-blue">mais divulgação sua empresa conquista!</span></p>
+ <div class="target-grid">
+  <article class="target-card">
+   <div class="target-pic"><img src="https://images.pexels.com/photos/15119167/pexels-photo-15119167.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
+   <div class="target-content"><div class="value">R$ 5 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa ganha</h3>
+    <ul><li><span><b>1 criador de conteúdo</b> para visitar, gravar e divulgar seu estabelecimento.</span></li><li><span>Divulgação especial na comunidade do Clube VIP.</span></li><li><span>Conteúdo profissional para publicar nas suas redes sociais.</span></li></ul>
+   </div>
+  </article>
+  <article class="target-card premium">
+   <div class="target-pic"><img src="https://images.pexels.com/photos/9809838/pexels-photo-9809838.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
+   <div class="target-content"><div class="value">R$ 10 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa conquista ainda mais</h3>
+    <ul><li><span><b>Mais 1 criador de conteúdo</b> para divulgar seu negócio.</span></li><li><span><b>15 dias em destaque</b> nas comunidades do Clube VIP.</span></li><li><span>Publicações nos grupos dos condomínios em que atuamos.</span></li><li><span>Campanha com <b>tráfego pago</b> para impulsionar sua marca.</span></li><li><span>Divulgação especial de ofertas, produtos e serviços.</span></li></ul>
+   </div>
+  </article>
+ </div>
+ <div class="accumulation"><b>As premiações são cumulativas!</b> Ao atingir R$ 10 mil, sua empresa recebe os benefícios das duas metas.</div>
+ <p class="fine">As metas representam a soma dos valores mensais das contas de luz credenciadas dos colaboradores, não a quantidade de funcionários. Campanhas conforme regulamento.</p>
+
+<a class="button target-cta" href="#cadastro">QUERO PARTICIPAR GRATUITAMENTE <span aria-hidden="true">→</span></a>
+</div></section>
+<section class="section winner prize-feature" id="premiacao" aria-labelledby="h-premiacao"><div class="shell winner-wrap">
+ <div><div class="section-kicker"><span class="stepnum">06.</span><span>PRÊMIO ESPECIAL</span></div>
+ <h2 id="h-premiacao">Sua marca divulgada por um influenciador de <b>até 1 milhão de seguidores!</b></h2>
+ <p class="speaker">Além das premiações por metas, o estabelecimento que mais credenciar contas de luz dos colaboradores durante a campanha poderá ganhar <b>uma visita e uma publicação especial de um influenciador.</b></p>
+ <p class="punch">Mais visibilidade para sua marca e novas oportunidades de negócios!</p>
+ <p class="fine">Premiação sujeita ao regulamento e à disponibilidade do influenciador.</p>
+ </div>
+ <div class="winner-image"><img src="https://images.pexels.com/photos/8370744/pexels-photo-8370744.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia real de criadora de conteúdo para representar campanha com influenciador" loading="lazy"><div class="winner-sticker">Campanha especial <b>até 1 milhão</b> de seguidores</div></div>
+</div></section>
+
 <section class="section" id="portfolio" aria-labelledby="h-portfolio"><div class="shell">
- <div class="section-kicker"><span class="stepnum">05.</span><span>PORTFÓLIO DE SUCESSO</span></div>
+ <div class="section-kicker"><span class="stepnum">07.</span><span>PORTFÓLIO DE SUCESSO</span></div>
  <h2 id="h-portfolio">Grandes marcas já fazem parte da nossa história.</h2>
  <p class="proof-intro">Conheça empresas, estabelecimentos e comunidades que participam das nossas iniciativas.</p>
  <div class="brand-marquee" aria-label="Marcas apresentadas no portfólio comercial">
@@ -1088,8 +1155,9 @@ html[data-versao="1"] .hero-reimagined:after{content:"";position:absolute;z-inde
  </div>
  <p class="fine">Os números e materiais acima foram reaproveitados da proposta comercial existente. A publicação comercial definitiva depende da confirmação dos dados e autorizações de uso de marca.</p>
 </div></section>
+
 <section class="section application signup-section" id="cadastro" aria-labelledby="h-cadastro"><div class="shell application-layout">
- <div class="application-copy"><div class="section-kicker"><span class="stepnum">06.</span><span>CADASTRO GRATUITO</span></div><h2 id="h-cadastro">Faça parte do <span class="strong-blue">Clube VIP!</span></h2>
+ <div class="application-copy"><div class="section-kicker"><span class="stepnum">08.</span><span>CADASTRO GRATUITO</span></div><h2 id="h-cadastro">Faça parte do <span class="strong-blue">Clube VIP!</span></h2>
   <p>Cadastre seu estabelecimento gratuitamente e comece a aproveitar os benefícios da parceria.</p><div class="punch" style="font-size:20px">Sem burocracia.<br>Sem investimento.</div>
  </div>
  <div class="application-panel"><h3>Cadastrar meu estabelecimento</h3>
