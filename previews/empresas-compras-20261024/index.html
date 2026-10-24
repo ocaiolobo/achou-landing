@@ -1062,6 +1062,41 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
 @media(max-width:760px){.company-benefit-card{padding:20px!important;gap:15px!important;align-items:start!important}.company-benefit-card .benefit-photo{width:91px!important;height:91px!important;flex:0 0 91px!important;border-radius:16px!important}.company-benefit-card h3{font-size:23px!important;line-height:1.2!important}.company-benefit-card p{font-size:16.5px!important;line-height:1.58!important}.cb-count{font-size:12px!important}.cb-energy .deal-summary.energy-offer{grid-template-columns:1fr!important;gap:16px!important}.cb-energy-provider{font-size:14px}.cb-example{display:flex;flex-direction:column}.cb-example span{font-size:15px!important}.simple-approval{flex-direction:column;align-items:stretch}.simple-approval .button{width:100%}}
 @media(max-width:520px){html[data-versao="1"] .hv1-intro h1{font-size:clamp(39px,10vw,47px)!important}.company-benefits h2,.campaign-targets h2,.showcase h2,.employee-benefits h2{font-size:clamp(31px,8vw,39px)!important}.company-benefit-card{display:block!important;padding:23px 20px!important}.company-benefit-card .benefit-photo{width:100%!important;height:147px!important;max-width:none!important;margin-bottom:15px!important;flex:none!important}.company-benefit-card h3{font-size:25px!important}.company-benefit-card p{font-size:17px!important}.cb-energy .deal-summary.energy-offer{padding:18px 17px!important}.cb-energy .deal-summary.energy-offer .percentage{font-size:55px!important}.profile-images figcaption{font-size:15px!important}.target-content li{font-size:16px!important}}
 
+
+/* Benefícios comerciais v3 — encaixe dos materiais originais na jornada 1→2→3 */
+.company-benefit-grid{display:flex!important;flex-direction:column!important;gap:24px!important}
+.cb-audience{background:#f8fafc; padding:28px 22px; border:1px solid #e7eef5; border-radius:26px; margin:0; box-shadow:0 7px 19px #112d490a}
+.cb-audience .shell{width:100%!important;max-width:100%!important;padding:0!important}
+.cb-audience .profile-head{gap:22px;margin:0 0 12px}
+.cb-audience .profile-head h2{font-size:clamp(28px,3.1vw,40px)!important;margin:0 0 12px!important;line-height:1.13}
+.cb-audience .count-hero{white-space:normal}
+.cb-audience .description{font-size:clamp(17px,1.8vw,20px)!important;line-height:1.55!important}
+.cb-audience .profile-images{margin-top:20px!important}
+.cb-audience .profile-images figure{min-width:0}
+.cb-energy .cb-utility-visual{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:18px;margin:21px 0}
+.cb-utility-logo,.cb-utility-bill{background:#fff;min-width:0;min-height:162px;border:1px solid #d8e8df;border-radius:18px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.cb-utility-logo img{max-width:260px;width:100%;height:auto;max-height:112px;object-fit:contain}
+.cb-utility-logo span{font-size:13px;text-align:center;color:#5b746c;font-weight:650}
+.cb-utility-bill{align-items:stretch;gap:12px}
+.cb-bill-head{display:flex;align-items:center;justify-content:space-between;font-size:12px;gap:12px;color:#175e3d;font-weight:850}
+.cb-bill-head span:last-child{font-size:10px;color:#72827a;font-weight:500}
+.cb-bill-lines{display:grid;gap:6px}
+.cb-bill-lines i{display:block;height:5px;border-radius:99px;background:#dce8e2}
+.cb-bill-lines i:nth-child(2){width:65%}.cb-bill-lines i:nth-child(3){width:83%}
+.cb-bill-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#405d4e}
+.cb-bill-row span{font-size:12px;color:#697d71}
+.cb-bill-reduction{background:#d8f6e5;border-radius:9px;padding:10px;font-size:14px;color:#067c45;text-align:center}
+.cb-bill-reduction b{font-size:23px}
+.cb-employee-vouchers{padding:24px 0 0}
+.cb-coupon-promise{display:flex;align-items:center;gap:16px;border:2px solid #f2dc77;border-radius:19px;background:#fff9d8;padding:18px 21px;margin:0 0 23px}
+.cb-coupon-time{flex:0 0 auto;background:#ffd600;color:#172739;border-radius:12px;padding:15px 11px;font-size:26px;font-weight:900}
+.cb-coupon-promise h4{font-size:clamp(20px,2.4vw,27px);line-height:1.2;letter-spacing:-.03em;margin:0 0 8px}
+.cb-coupon-promise p{font-size:clamp(15px,1.6vw,18px)!important;line-height:1.45!important;margin:0}
+.cb-employee-vouchers .vip-gift-board{margin-top:0}
+.cb-employee-vouchers .gift-board-heading h4{font-size:clamp(22px,2.8vw,32px)}
+.cb-employee-vouchers .camarote-board{margin-top:22px}
+@media(max-width:720px){.cb-audience{padding:20px 15px}.cb-audience .profile-head{display:flex;flex-direction:column;align-items:flex-start!important}.cb-audience .profile-images{grid-template-columns:repeat(2,minmax(0,1fr))}.cb-energy .cb-utility-visual{grid-template-columns:1fr}.cb-utility-logo,.cb-utility-bill{min-height:120px}.cb-coupon-promise{align-items:flex-start;padding:16px 14px;gap:12px}.cb-coupon-time{font-size:22px;padding:10px 8px}.cb-employee-vouchers{padding-top:18px}}
+
 </style>
 </head>
 <body>
@@ -1092,6 +1127,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
  </div>
 </section>
 
+
 <section class="hero" aria-labelledby="main-title"><div class="shell hero-grid">
  <div class="hero-copy">
   <span class="eyebrow">PARCERIA GRATUITA PARA ESTABELECIMENTOS</span>
@@ -1108,6 +1144,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
 </div><div class="shell v2-perks"><div><b>↗</b><span>Mais clientes reais</span></div><div><b>▥</b><span>Mais movimento</span></div><div><b>✦</b><span>Ações e campanhas exclusivas</span></div></div></section>
 
 
+
 <section class="section company-benefits" id="empresa" aria-labelledby="h-empresa"><div class="shell">
 <div class="section-kicker"><span class="stepnum">01.</span><span>3 BENEFÍCIOS PARA SUA EMPRESA</span></div>
 <div class="company-benefits-heading"><div><h2 id="h-empresa">Sua empresa ganha <span class="strong-blue">de 3 formas.</span></h2></div><span class="company-pill"><span aria-hidden="true">✓</span> 100% gratuito • Sem investimento</span></div>
@@ -1116,46 +1153,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
 <div class="benefit-photo"><img src="https://images.pexels.com/photos/12432697/pexels-photo-12432697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Criadora de conteúdo divulgando uma marca" loading="lazy"></div>
 <div class="cb-copy"><span class="cb-count">BENEFÍCIO 1</span><h3>Divulgação, criadores de conteúdo e mais vendas</h3><p>Seu negócio entra para o <b>Clube VIP</b>, com acesso a campanhas, influenciadores e divulgação para nossa comunidade de <b>mais de 30 mil pessoas</b>. Mais alcance para conquistar clientes.</p></div>
 </article>
-<article class="company-benefit-card cb-energy"><div class="cb-copy"><span class="cb-count">BENEFÍCIO 2</span><h3>Economia para os funcionários</h3><div class="deal-summary energy-offer">
-  <div><h3>Ofereça aos seus colaboradores a oportunidade de economizar na conta de luz, <em>gratuitamente.</em></h3></div>
-  <div class="deal-savings"><span class="percentage">até 30%</span><b>de economia na conta de luz</b></div>
- </div>
-<div class="cb-energy-provider"><span aria-hidden="true" class="provider-dot">●</span><span>Para clientes atendidos pela <strong>Neoenergia Coelba</strong>, por meio da parceria comercial do Grupo Lobo com a BCM.</span></div></div>
-</article>
-<article class="company-benefit-card cb-purchase">
-<div class="benefit-photo"><img src="https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Compra e pagamento em estabelecimento comercial" loading="lazy"></div>
-<div class="cb-copy"><span class="cb-count">BENEFÍCIO 3</span><h3>Compras garantidas no seu negócio!</h3><p><b>A cada R$ 10 mil em contas de luz credenciadas pelos funcionários, garantimos R$ 1 mil em compras no seu estabelecimento.</b> Mais resultados na campanha, mais encomendas e compras para sua empresa, conforme contrato.</p>
-<div class="cb-example"><span>R$ 5 mil em contas <b>→ R$ 500 em compras</b></span><span>R$ 10 mil em contas <b>→ R$ 1.000 em compras</b></span><span>R$ 20 mil em contas <b>→ R$ 2.000 em compras</b></span></div></div>
-</article></div>
-<p class="fine">Compras únicas por novos credenciamentos, calculadas sobre o valor computável das contas, não sobre o valor integral da fatura. Realizadas após o recebimento da comissão correspondente, conforme contrato. Economia sujeita às condições da proposta.</p>
-</div></section>
-<section class="section campaign-targets" id="metas" aria-labelledby="h-metas"><div class="shell">
-<div class="section-kicker"><span class="stepnum">02.</span><span>PREMIAÇÕES POR RESULTADOS</span></div>
-<h2 id="h-metas">A cada meta, <span class="strong-blue">mais divulgação e compras!</span></h2>
-<p class="punch">Veja as metas para receber <b>criadores de conteúdo, campanhas e compras garantidas.</b></p>
- 
- <div class="target-grid">
-  <article class="target-card">
-   <div class="target-pic"><img src="https://images.pexels.com/photos/15119167/pexels-photo-15119167.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
-   <div class="target-content"><div class="value">R$ 5 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa ganha</h3>
-    <ul><li><span><b>R$ 500 em compras garantidas</b> no seu estabelecimento.</span></li><li><span><b>1 criador de conteúdo</b> para visitar, gravar e divulgar seu estabelecimento.</span></li><li><span>Divulgação especial na comunidade do Clube VIP.</span></li><li><span>Conteúdo profissional para publicar nas suas redes sociais.</span></li></ul>
-   </div>
-  </article>
-  <article class="target-card premium">
-   <div class="target-pic"><img src="https://images.pexels.com/photos/9809838/pexels-photo-9809838.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
-   <div class="target-content"><div class="value">R$ 10 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa conquista ainda mais</h3>
-    <ul><li><span><b>R$ 1.000 em compras garantidas no total</b> no seu estabelecimento.</span></li><li><span><b>Mais 1 criador de conteúdo</b> para divulgar seu negócio.</span></li><li><span><b>15 dias em destaque</b> nas comunidades do Clube VIP.</span></li><li><span>Publicações nos grupos dos condomínios em que atuamos.</span></li><li><span>Campanha com <b>tráfego pago</b> para impulsionar sua marca.</span></li><li><span>Divulgação especial de ofertas, produtos e serviços.</span></li></ul>
-   </div>
-  </article>
- </div>
- <div class="accumulation"><b>As premiações de divulgação são cumulativas!</b> Ao atingir R$ 10 mil, a empresa recebe os benefícios de divulgação das duas metas e R$ 1.000 no total em compras, sem duplicar os R$ 500 anteriores.</div>
- <p class="fine">As metas consideram o valor computável das contas de luz credenciadas, não a quantidade de funcionários nem o total integral das faturas. Compras e campanhas conforme contrato e regulamento.</p>
-
-<a class="button target-cta" href="#cadastro">QUERO FAZER PARTE <span aria-hidden="true">→</span></a>
-</div></section>
-
-<section class="section soft showcase" id="assinantes" aria-labelledby="h-assinantes"><div class="shell">
- <div class="profile-head"><div><div class="section-kicker"><span class="stepnum">03.</span><span>COMUNIDADE CLUBE VIP</span></div><h2 id="h-assinantes">Quem são nossos <span class="strong-blue">assinantes?</span></h2></div>
+<div class="cb-audience showcase" id="assinantes"><div class="shell"><div class="profile-head"><div><div class="section-kicker"><span class="stepnum">03.</span><span>COMUNIDADE CLUBE VIP</span></div><h2 id="h-assinantes">Onde estão nossos <span class="strong-blue">assinantes?</span></h2></div>
  <div class="count-hero"><b>+30 mil</b><small>pessoas na nossa comunidade</small></div></div>
  <p class="description narrow-copy"><b>Condomínios:</b> Horto Florestal, Itaigara, Pituba e outros bairros de Salvador.<br><b>Nosso público:</b> funcionários da Petrobras, servidores públicos da Bahia e colaboradores de empresas parceiras.</p>
  <div class="profile-images">
@@ -1175,14 +1173,16 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
    <figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption>
   </figure>
  </div>
-</div></section>
-
-
-<section class="section employee-benefits" id="beneficios" aria-labelledby="h-beneficios"><div class="shell">
-<div class="section-kicker"><span class="stepnum">04.</span><span>VANTAGENS DA CAMPANHA</span></div><h2 id="h-beneficios">Seus funcionários também ganham <span class="strong-blue">cupons e vantagens.</span></h2><p class="description">Vale-compras, vouchers e experiências especiais fazem parte das campanhas do Clube VIP.</p>
- 
-
- <div class="vip-gift-board" aria-label="Quadro ilustrativo de presentes do Clube VIP">
+</div></div>
+<article class="company-benefit-card cb-energy"><div class="cb-copy"><span class="cb-count">BENEFÍCIO 2</span><h3>Economia para os funcionários</h3><div class="deal-summary energy-offer">
+  <div><h3>Ofereça aos seus colaboradores a oportunidade de economizar na conta de luz, <em>gratuitamente.</em></h3></div>
+  <div class="deal-savings"><span class="percentage">até 30%</span><b>de economia na conta de luz</b></div>
+ </div>
+<div class="cb-utility-visual"><div class="cb-utility-logo"><img src="https://www.neoenergia.com/documents/107588/2776028/NEO%2BCB%2BHOR%2Bpositive%2Bcolour_white%2Bbackground.png/0af8e42e-7ec8-2b82-d48f-e65b8576a110?t=1713297159713&amp;version=1.0" alt="Identificação visual da Neoenergia Coelba, distribuidora de energia na Bahia" loading="lazy"><span>Distribuidora que atende o cliente</span></div>
+<div class="cb-utility-bill" aria-label="Exemplo ilustrativo de uma conta de energia"><div class="cb-bill-head"><span>▤ CONTA DE LUZ</span><span>Exemplo ilustrativo</span></div><div class="cb-bill-lines"><i></i><i></i><i></i></div><div class="cb-bill-row"><b>Conta mensal</b><span>Simule a sua economia</span></div><div class="cb-bill-reduction">Economia potencial de até <b>30%</b></div></div></div>
+<div class="cb-energy-provider"><span aria-hidden="true" class="provider-dot">●</span><span>Para clientes atendidos pela <strong>Neoenergia Coelba</strong>, por meio da parceria comercial do Grupo Lobo com a BCM.</span></div></div>
+</article>
+<div class="cb-employee-vouchers" id="beneficios"><div class="cb-coupon-promise"><span class="cb-coupon-time">24H</span><div><h4>Credenciou em até 24 horas? Ganha um cupom!</h4><p>Os funcionários participantes recebem um cupom da campanha após concluir o credenciamento dentro do prazo, conforme regulamento. Veja exemplos de benefícios abaixo.</p></div></div><div class="vip-gift-board" aria-label="Quadro ilustrativo de presentes do Clube VIP">
   <div class="gift-board-heading"><span class="gift-board-mark" aria-hidden="true">✦</span><div><span class="gift-kicker">CLUBE VIP · BENEFÍCIOS EM DESTAQUE</span><h4>Um quadro cheio de presentes.</h4><p>Vale-compras, vantagens e experiências que despertam o interesse da sua equipe.</p></div></div>
   <div class="gift-board-divider"><span>VALE-COMPRAS</span><span>REFERÊNCIAS DE CAMPANHAS</span></div>
   <div class="gift-cards">
@@ -1212,11 +1212,45 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
  </div>
  <p class="voucher-note">Quadro ilustrativo de campanhas do Clube VIP. Benefícios, marcas e experiências não constituem promessa de prêmio nem confirmação de parceria. Resgate sujeito ao regulamento e à disponibilidade.</p>
 
+</div>
+<article class="company-benefit-card cb-purchase">
+<div class="benefit-photo"><img src="https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500&amp;q=85" alt="Compra e pagamento em estabelecimento comercial" loading="lazy"></div>
+<div class="cb-copy"><span class="cb-count">BENEFÍCIO 3</span><h3>Compras garantidas no seu negócio!</h3><p><b>A cada R$ 10 mil em contas de luz credenciadas pelos funcionários, garantimos R$ 1 mil em compras no seu estabelecimento.</b> Mais resultados na campanha, mais encomendas e compras para sua empresa, conforme contrato.</p>
+<div class="cb-example"><span>R$ 5 mil em contas <b>→ R$ 500 em compras</b></span><span>R$ 10 mil em contas <b>→ R$ 1.000 em compras</b></span><span>R$ 20 mil em contas <b>→ R$ 2.000 em compras</b></span></div></div>
+</article></div>
+<p class="fine">Compras únicas por novos credenciamentos, calculadas sobre o valor computável das contas, não sobre o valor integral da fatura. Realizadas após o recebimento da comissão correspondente, conforme contrato. Economia sujeita às condições da proposta.</p>
 </div></section>
 
-<section class="section soft process-section" id="contrapartida" aria-labelledby="h-contrapartida"><div class="shell"><div class="section-kicker"><span class="stepnum">05.</span><span>SIMPLES DE COMEÇAR</span></div>
-<div class="simple-approval"><div><h2 id="h-contrapartida">Você só precisa <span class="strong-blue">dizer sim.</span></h2><p>Autorize a apresentação aos seus funcionários. <b>O Grupo Lobo cuida de toda a implantação</b>, das propostas e do acompanhamento dos interessados.</p></div><a class="button" href="#cadastro">QUERO FAZER PARTE <span class="arrow">→</span></a></div>
+<section class="section campaign-targets" id="metas" aria-labelledby="h-metas"><div class="shell">
+<div class="section-kicker"><span class="stepnum">02.</span><span>PREMIAÇÕES POR RESULTADOS</span></div>
+<h2 id="h-metas">A cada meta, <span class="strong-blue">mais divulgação e compras!</span></h2>
+<p class="punch">Veja as metas para receber <b>criadores de conteúdo, campanhas e compras garantidas.</b></p>
+ 
+ <div class="target-grid">
+  <article class="target-card">
+   <div class="target-pic"><img src="https://images.pexels.com/photos/15119167/pexels-photo-15119167.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de criador de conteúdo produzindo vídeo" loading="lazy"><span class="target-top">META 1 • PREMIUM</span></div>
+   <div class="target-content"><div class="value">R$ 5 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa ganha</h3>
+    <ul><li><span><b>R$ 500 em compras garantidas</b> no seu estabelecimento.</span></li><li><span><b>1 criador de conteúdo</b> para visitar, gravar e divulgar seu estabelecimento.</span></li><li><span>Divulgação especial na comunidade do Clube VIP.</span></li><li><span>Conteúdo profissional para publicar nas suas redes sociais.</span></li></ul>
+   </div>
+  </article>
+  <article class="target-card premium">
+   <div class="target-pic"><img src="https://images.pexels.com/photos/9809838/pexels-photo-9809838.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia de divulgação e redes sociais" loading="lazy"><span class="target-top">META 2 • PREMIUM PLUS</span></div>
+   <div class="target-content"><div class="value">R$ 10 mil</div><div class="unit">em contas de luz credenciadas dos colaboradores</div><h3>Sua empresa conquista ainda mais</h3>
+    <ul><li><span><b>R$ 1.000 em compras garantidas no total</b> no seu estabelecimento.</span></li><li><span><b>Mais 1 criador de conteúdo</b> para divulgar seu negócio.</span></li><li><span><b>15 dias em destaque</b> nas comunidades do Clube VIP.</span></li><li><span>Publicações nos grupos dos condomínios em que atuamos.</span></li><li><span>Campanha com <b>tráfego pago</b> para impulsionar sua marca.</span></li><li><span>Divulgação especial de ofertas, produtos e serviços.</span></li></ul>
+   </div>
+  </article>
+ </div>
+ <div class="accumulation"><b>As premiações de divulgação são cumulativas!</b> Ao atingir R$ 10 mil, a empresa recebe os benefícios de divulgação das duas metas e R$ 1.000 no total em compras, sem duplicar os R$ 500 anteriores.</div>
+ <p class="fine">As metas consideram o valor computável das contas de luz credenciadas, não a quantidade de funcionários nem o total integral das faturas. Compras e campanhas conforme contrato e regulamento.</p>
+
+<a class="button target-cta" href="#cadastro">QUERO FAZER PARTE <span aria-hidden="true">→</span></a>
 </div></section>
+
+
+<section class="section soft process-section" id="contrapartida" aria-labelledby="h-contrapartida"><div class="shell"><div class="section-kicker"><span class="stepnum">05.</span><span>SIMPLES DE COMEÇAR</span></div>
+<div class="simple-approval"><div><h2 id="h-contrapartida">Você só precisa <span class="strong-blue">dizer sim.</span></h2><p>Autorize seus funcionários a fazer o cadastro. <b>O restante é conosco!</b></p></div><a class="button" href="#cadastro">QUERO FAZER PARTE <span class="arrow">→</span></a></div>
+</div></section>
+
 <section class="section winner prize-feature" id="premiacao" aria-labelledby="h-premiacao"><div class="shell winner-wrap">
  <div><div class="section-kicker"><span class="stepnum">06.</span><span>PRÊMIO ESPECIAL</span></div>
  <h2 id="h-premiacao">Sua marca divulgada por um influenciador de <b>até 1 milhão de seguidores!</b></h2>
@@ -1226,6 +1260,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
  </div>
  <div class="winner-image"><img src="https://images.pexels.com/photos/8370744/pexels-photo-8370744.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Fotografia real de criadora de conteúdo para representar campanha com influenciador" loading="lazy"><div class="winner-sticker">Campanha especial <b>até 1 milhão</b> de seguidores</div></div>
 </div></section>
+
 
 
 <section class="section" id="portfolio" aria-labelledby="h-portfolio"><div class="shell">
@@ -1256,9 +1291,10 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
 </div></section>
 
 
+
 <section class="section application signup-section" id="cadastro" aria-labelledby="h-cadastro"><div class="shell application-layout">
  <div class="application-copy"><div class="section-kicker"><span class="stepnum">08.</span><span>CADASTRO GRATUITO</span></div><h2 id="h-cadastro">Dê o primeiro <span class="strong-blue">sim à parceria!</span></h2>
-  <p>Autorize o contato para organizarmos uma apresentação online de 15 minutos para sua equipe. A participação é gratuita.</p><div class="punch" style="font-size:20px">Sem burocracia.<br>Sem investimento.</div>
+  <p>Faça parte gratuitamente e leve os benefícios do Clube VIP para sua empresa. Nós cuidamos da implantação.</p><div class="punch" style="font-size:20px">Sem burocracia.<br>Sem investimento.</div>
  </div>
  <div class="application-panel"><h3>Solicitar participação da empresa</h3>
   <form id="vip-form">
