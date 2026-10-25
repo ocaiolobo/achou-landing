@@ -1121,6 +1121,13 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
 .cb-audience .audience-servidores .public-icon svg{width:33px!important;height:33px!important}
 @media(max-width:620px){.cb-audience .audience-servidores .audience-gov-label{display:none!important}.cb-audience .audience-servidores .audience-brand-box{gap:12px!important}.cb-audience .audience-servidores figcaption{font-size:15px!important;line-height:1.23!important}}
 
+
+/* Fotografia real em alta resolução (3047x1714), respeitando o card e a legenda mobile */
+.profile-images figure.audience-card.audience-servidores{position:relative!important;background:#d7e4ed!important;overflow:hidden!important}
+.profile-images figure.audience-card.audience-servidores img.audience-building-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center center!important;display:block!important;transform:none!important}
+.profile-images figure.audience-card.audience-servidores figcaption{position:absolute!important;z-index:2!important;bottom:0!important;left:0!important;right:0!important;background:linear-gradient(0deg,rgba(12,39,62,.98),rgba(12,39,62,.9))!important;color:white!important;font-size:clamp(15px,1.7vw,19px)!important;line-height:1.15!important;padding:16px 16px 15px!important;text-shadow:none!important}
+.profile-images figure.audience-card.audience-servidores figcaption .profile-label{display:block!important;font-size:12px!important;font-weight:550!important;margin-top:5px}
+@media(max-width:640px){.profile-images figure.audience-card.audience-servidores img.audience-building-photo{object-position:center!important}.profile-images figure.audience-card.audience-servidores figcaption{font-size:15px!important;padding:12px 10px!important}}
 </style>
 </head>
 <body>
@@ -1191,10 +1198,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
    <figcaption>Funcionários da Petrobras<span class="profile-label">Perfil de público</span></figcaption>
   </figure>
   <figure class="ppl audience-card audience-servidores">
-   <div class="audience-brand-box"><span class="audience-eyebrow">PÚBLICO NA COMUNIDADE</span>
-    <div class="public-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round"><path d="M10 26 32 13l22 13H10Zm5 4v20m11-20v20m12-20v20m11-20v20M10 53h44M7 58h50"/></svg></div>
-    <span class="audience-gov-label">Servidores públicos da Bahia</span>
-   </div>
+   <img class="audience-building-photo" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/GovernadoriaBA010611.jpg" alt="Foto da Governadoria da Bahia, no Centro Administrativo da Bahia, em Salvador" width="3047" height="1714" loading="lazy" decoding="async">
    <figcaption>Servidores públicos da Bahia<span class="profile-label">Perfil de público</span></figcaption>
   </figure>
  </div>
@@ -1330,7 +1334,7 @@ html[data-versao="1"] .hv1-intro h1{font-size:clamp(43px,5.3vw,69px)!important;l
  </div>
 </div></section>
 </main>
-<footer class="footer"><div class="shell"><b>Clube VIP • Parceria gratuita com estabelecimentos</b><br>Fotografias reais de bancos de imagem e imagens do acervo da proposta NEXA. As imagens ilustrativas não comprovam parcerias. <a href="#top">Voltar ao início ↑</a></div></footer>
+<footer class="footer"><div class="shell"><b>Clube VIP • Parceria gratuita com estabelecimentos</b><br>Fotografias reais de bancos de imagem e do acervo da proposta NEXA. As imagens ilustrativas não comprovam parcerias. Foto da Governadoria da Bahia: <a href="https://commons.wikimedia.org/wiki/File:GovernadoriaBA010611.jpg" target="_blank" rel="noopener noreferrer">Sitenl / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> (enquadramento adaptado). <a href="#top">Voltar ao início ↑</a></div></footer>
 <script>
 (function(){
  const fileInput=document.getElementById('company-logo'),form=document.getElementById('vip-form'),box=document.getElementById('upload-box'),preview=document.getElementById('logo-preview');
