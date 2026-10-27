@@ -1400,6 +1400,73 @@ body{color:#142136}
 @media(max-width:850px){.v5-grid{gap:25px}.v5-portrait{min-height:400px}.v5 h1{font-size:clamp(36px,5.2vw,53px)}}
 @media(max-width:700px){.v5-grid,.v5-calc-grid{grid-template-columns:1fr;gap:30px}.v5 h1{font-size:clamp(44px,10vw,63px)}.v5-portrait{min-height:270px;aspect-ratio:1.15;max-height:410px}.v5-badges{grid-template-columns:1fr 1fr;margin-top:24px}.v5-badges span:last-child{grid-column:span 2}.v5-cta{width:100%;max-width:500px}}
 @media(max-width:420px){.v5 h1{font-size:43px}.v5-subtitle{font-size:.58em}.v5-promise{margin:24px 0}.v5-promise p{font-size:16px}.v5-portrait,.v5-portrait img{border-radius:24px}.v5-photo-card{bottom:13px;left:12px;right:12px;padding:12px 16px}.v5-sticker{top:14px;left:7px}.v5-badges span{padding:12px;font-size:11px}.v5-calc{padding:36px 0}}
+</style><style>
+/* V6, exemplos de divulgação e prova social próxima à capa */
+.v6-eyebrow{display:block;font-size:11px;font-weight:850;letter-spacing:.12em;color:#2f79d6;margin-bottom:11px}
+.v6-proofs-near{padding:48px 0;background:#fff}
+.v6-near-head{display:flex;justify-content:space-between;align-items:end;gap:18px}
+.v6-near-head h2,.v6-section-title h2{font-size:clamp(30px,4.6vw,48px);line-height:1.12;letter-spacing:-.05em;margin:0 0 7px;color:#102d53}
+.v6-near-head em,.v6-section-title em{font-style:normal;color:#2a80e8}
+.v6-near-head p,.v6-section-title p{margin:5px 0;font-size:15px;color:#6b7b8b;line-height:1.55}
+.v6-near-head a{font-size:13px;font-weight:820;color:#2274d2;white-space:nowrap;padding-bottom:6px;border-bottom:2px solid #cde3ff}
+.v6-proof-samples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;max-width:650px;margin:23px 0 0}
+.v6-proof-samples .proof-card{min-width:0!important;max-width:none!important;width:100%!important;padding:12px!important;border-radius:22px!important;box-shadow:0 8px 25px #16365712;scroll-snap-align:unset!important}
+.v6-proof-samples .proof-shot{max-height:180px;object-fit:contain;width:100%;border-radius:12px}
+.v6-proof-samples .proof-info strong{font-size:22px!important}
+.v6-proof-samples .proof-info p{font-size:11px!important}
+.v6-mini-disclaimer{font-size:11px;color:#99a5b0;max-width:700px;margin:14px 0 0;line-height:1.5}
+.v6-demonstration{background:linear-gradient(170deg,#f3f9ff 0%,#fffdf5 100%);border-block:1px solid #e5edf4;padding:67px 0 75px}
+.v6-section-title{text-align:center;max-width:760px;margin:0 auto 29px}
+.v6-section-title p{margin:8px auto 0}
+.v6-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+.v6-demo-panel{min-width:0;background:#fff;border:1px solid #e4eaf0;border-radius:28px;padding:20px;box-shadow:0 15px 40px #193b6311}
+.v6-demo-heading{display:flex;gap:12px;align-items:center;margin-bottom:17px}
+.v6-demo-heading h3{font-size:clamp(19px,2.3vw,27px);line-height:1.15;letter-spacing:-.04em;color:#122d50;margin:0}
+.v6-demo-heading p{font-size:13px;color:#788898;margin:5px 0 0}
+.v6-app-icon{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:14px;color:white;font-size:25px;font-weight:800}
+.v6-app-icon.wa{background:#18ad74}.v6-app-icon.ig{background:linear-gradient(135deg,#893be1,#f54779,#ffc04a)}
+.v6-wa-screen{overflow:hidden;border-radius:19px;background:#ece9df;max-width:430px;margin:0 auto}
+.v6-wa-head{display:flex;align-items:center;gap:10px;background:#076554;color:#fff;padding:11px 13px}
+.v6-wa-avatar{display:grid;place-items:center;border-radius:50%;width:32px;height:32px;background:#dbefdc;color:#257b59;font-weight:850}
+.v6-wa-head strong{display:block;font-size:12px}.v6-wa-head small{display:block;font-size:10px;color:#b6ead9;margin-top:2px}
+.v6-wa-body{padding:18px 12px 21px;display:flex;flex-direction:column;gap:12px;background:radial-gradient(ellipse at 0 0,#d7e8d855,transparent 80%),#e9e6de;min-height:340px}
+.v6-bubble{max-width:90%;border-radius:11px;padding:12px 11px 7px;box-shadow:0 1px 5px #163a2a12;font-size:13px;color:#263437;line-height:1.48}
+.v6-bubble.outgoing{align-self:flex-end;background:#d6f7ce;border-top-right-radius:3px}
+.v6-bubble.incoming{align-self:flex-start;background:white;border-top-left-radius:3px}
+.v6-bubble small{display:block;text-align:right;font-size:9px;color:#84948d;margin-top:4px}
+.v6-instagram-phone{max-width:320px;margin:0 auto;background:#1b2031;border:8px solid #1b2031;border-radius:24px;color:white}
+.v6-instagram-bar{display:flex;align-items:center;gap:8px;padding:3px 8px 11px;font-size:10px}
+.v6-instagram-bar b{flex:1;font-weight:770}.v6-instagram-bar span:first-child{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#10c0aa}
+.v6-flyer{min-height:404px;display:flex;flex-direction:column;padding:15px 13px;border-radius:10px;color:#09253b;background:radial-gradient(ellipse at 100% 0%,#a7e9f2,transparent 55%),linear-gradient(145deg,#fff,#e7fff2 80%,#fff)}
+.v6-flyer-brand{display:flex;gap:7px;align-items:center;font-size:12px;line-height:1}
+.v6-flyer-brand span{display:grid;place-items:center;width:33px;height:33px;border-radius:9px;background:#0d283d;color:#43f0d0;font-size:30px;font-weight:900}
+.v6-flyer-overline{font-size:7px;letter-spacing:.23em;margin:9px 0 0;color:#8293a1;font-weight:800}
+.v6-flyer-headline{font-size:25px;line-height:.99;font-weight:930;letter-spacing:-.06em;margin-top:16px}
+.v6-flyer-headline strong{display:block;font-size:76px;color:#19c18d;line-height:.93}
+.v6-flyer-headline em{display:block;font-size:27px;color:#1ab98d;font-style:normal}
+.v6-flyer-state{display:inline-block;background:#e6fff3;border-radius:30px;padding:8px 10px;font-size:11px;align-self:flex-start;margin:13px 0 0}
+.v6-flyer-checks{font-size:8px;line-height:1.4;margin-top:11px;font-weight:650}
+.v6-flyer-gift{background:#f4fffb;border:1px solid #b1e8d6;border-radius:13px;margin-top:13px;padding:9px}
+.v6-flyer-gift small{font-size:7px;color:#2b7972;letter-spacing:.11em}
+.v6-flyer-gift b{display:block;margin-top:4px;font-size:15px;letter-spacing:-.03em}
+.v6-flyer-gift div{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:9px}
+.v6-flyer-gift span{display:grid;place-items:center;text-align:center;background:#16875c;color:white;border-radius:6px;min-height:28px;font-size:9px;font-weight:850}
+.v6-flyer-gift span:nth-child(2){background:#1c61ad}.v6-flyer-gift span:nth-child(3){background:#ee8639}
+.v6-flyer-link{margin-top:12px;background:linear-gradient(100deg,#caffea,#fff);padding:10px 4px;text-align:center;border-radius:30px;font-size:10px;letter-spacing:.07em;font-weight:900;color:#124c42;border:1px solid #c0ebde}
+.v6-instagram-bottom{padding:10px 3px 4px;text-align:center;color:#e6e7ec;font-size:10px}
+.v6-demo-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;color:#7d8994;line-height:1.45;margin-top:15px}
+.v6-demo-foot span{max-width:245px}
+.v6-demo-foot button{background:#dff5e7;border:1px solid #bce3ca;color:#087e5b;border-radius:12px;padding:10px 12px;cursor:pointer;font-size:12px;font-weight:800;white-space:nowrap}
+.v6-explain{background:#effcf3;border:1px solid #cbe8d5;border-radius:16px;margin:26px auto 0;max-width:800px;padding:16px 20px;color:#1f7954;font-weight:650;font-size:13px;line-height:1.55}
+.v6-explain strong{font-weight:850}
+.v6-toast{position:fixed;bottom:21px;right:20px;z-index:1000;width:min(305px,calc(100vw - 38px));padding:13px 36px 13px 46px;background:white;border:1px solid #d4e8dc;border-radius:15px;box-shadow:0 12px 32px #153e2b38;font-size:12px;color:#273d36;transform:translateY(180%);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none}
+.v6-toast:before{content:"✓";position:absolute;left:12px;top:17px;width:26px;height:26px;display:grid;place-items:center;background:#dcf8e6;color:#189f6a;border-radius:50%;font-size:17px}
+.v6-toast.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.v6-toast small{display:block;color:#84948a;font-weight:780;letter-spacing:.1em;font-size:9px;margin-bottom:4px}
+.v6-toast button{position:absolute;right:10px;top:9px;background:none;border:0;color:#82918c;font-size:18px;cursor:pointer}
+@media(max-width:720px){.v6-near-head{align-items:flex-start;flex-direction:column;gap:10px}.v6-proof-samples{gap:10px}.v6-proof-samples .proof-card{padding:8px!important}.v6-proof-samples .proof-shot{max-height:145px}.v6-proof-samples .proof-info strong{font-size:18px!important}.v6-demonstration{padding:49px 0}.v6-pair{grid-template-columns:1fr}.v6-demo-panel{padding:15px}.v6-demo-foot{flex-wrap:wrap}}
+@media(max-width:400px){.v6-demo-foot button{width:100%}.v6-near-head h2{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.v6-toast{transition:none}}
 </style></head>
 <body><div class="preview">PRÉVIA — CAMPANHA DE INDICADORES</div><header class="header"><div class="shell head-inner">
 <a class="brand" href="#top" aria-label="Clube VIP"><span class="brand-mark">VIP</span> Clube <span class="vip">VIP</span></a>
@@ -1431,6 +1498,34 @@ body{color:#142136}
 <input type="range" id="v5range" min="1" max="15" step="1" value="5" oninput="v5calc(this.value)">
 <div class="v5-estimate"><small>Você poderia ganhar até</small><strong id="v5total">R$ 500</strong></div>
 <p>Simulação ilustrativa de até R$100 por conta. Os ganhos dependem das regras e não são garantidos.</p></div>
+</div></section><section class="v6-proofs-near"><div class="shell">
+<div class="v6-near-head"><div><span class="v6-eyebrow">REGISTROS DE PAGAMENTOS</span><h2>Comprovantes <em>à vista.</em></h2><p>Dois registros do acervo, com dados pessoais ocultados.</p></div><a href="#comprovantes">Ver todos os comprovantes ↗</a></div>
+<div id="v6-proof-samples" class="v6-proof-samples"><span>Carregando registros...</span></div>
+<p class="v6-mini-disclaimer">Os registros não comprovam, isoladamente, comissões deste programa nem garantem resultados.</p>
+</div></section>
+<section class="v6-demonstration" id="como-divulgar"><div class="shell">
+<div class="v6-section-title"><span class="v6-eyebrow">VEJA COMO FUNCIONA NA PRÁTICA</span><h2>Você só precisa <em>divulgar.</em></h2><p>Duas formas simples de apresentar a oportunidade a pessoas que você conhece.</p></div>
+<div class="v6-pair">
+<article class="v6-demo-panel"><header class="v6-demo-heading"><span class="v6-app-icon wa">✆</span><div><h3>Divulgação no WhatsApp</h3><p>Comece com uma pergunta simples.</p></div></header>
+<div class="v6-wa-screen"><div class="v6-wa-head"><span class="v6-wa-avatar">A</span><div><strong>Uma pessoa conhecida</strong><small>Conversa ilustrativa</small></div></div>
+<div class="v6-wa-body"><div class="v6-bubble outgoing">Oi, tudo bem? Você gostaria de reduzir sua conta de luz em até 30%?<small>10:32 ✓✓</small></div><div class="v6-bubble incoming">Gostaria sim! Como funciona?<small>10:33</small></div><div class="v6-bubble outgoing">É gratuito! Eu te mando meu link, você informa seu WhatsApp e envia uma foto da conta. A equipe te apresenta uma proposta.<small>10:34 ✓✓</small></div></div></div>
+<div class="v6-demo-foot"><span>Você pergunta, compartilha seu link e a equipe cuida da proposta.</span><button type="button" id="v6-copy-button" onclick="v6CopyScript()">Copiar roteiro ↗</button></div>
+</article>
+<article class="v6-demo-panel"><header class="v6-demo-heading"><span class="v6-app-icon ig">◎</span><div><h3>Divulgação no Instagram</h3><p>Publique seu flyer nos Stories com seu link.</p></div></header>
+<div class="v6-instagram-phone"><div class="v6-instagram-bar"><span>⚡</span><b>Grupo Lobo Energia</b><span>•••</span></div>
+<div class="v6-flyer">
+<div class="v6-flyer-brand"><span>ϟ</span><b>Grupo<br> Lobo Energia</b></div>
+<div class="v6-flyer-overline">MAIS ECONOMIA PARA VOCÊ</div>
+<div class="v6-flyer-headline">Sua conta de luz com até <strong>30%</strong> <em>de desconto.</em></div>
+<div class="v6-flyer-state">📍 Em toda a Bahia.</div>
+<div class="v6-flyer-checks">Sem taxa de adesão. &nbsp; Sem mensalidade. &nbsp; Sem pegadinha.</div>
+<div class="v6-flyer-gift"><small>CAMPANHA ESPECIAL CLUBE VIP</small><b>Vale-compras de R$500*</b><div><span>Hiperideal</span><span>Assaí</span><span>Atacadão</span></div></div>
+<div class="v6-flyer-link">🔗 ADICIONE SEU LINK AQUI</div>
+</div><div class="v6-instagram-bottom">A pessoa toca no link e solicita a proposta.</div></div>
+<div class="v6-demo-foot"><span>Miniatura ilustrativa baseada no flyer já aprovado, com espaço para o link individual.</span></div>
+</article>
+</div>
+<div class="v6-explain"><strong>Pronto!</strong> Depois do cadastro e da aprovação da primeira conta, você recebe seu link e os materiais de divulgação.</div>
 </div></section><section class="section company-benefits" id="como-comecar"><div class="shell">
 <div class="company-benefits-heading"><h2>NÃO SABE VENDER?<br><span class="strong-blue">NÃO TEM PROBLEMA!</span></h2></div>
 <article class="company-benefit-card cb-promo"><div class="cb-promo-summary">
@@ -1513,4 +1608,12 @@ body{color:#142136}
 </div></section></main>
 <footer class="footer"><div class="shell">Clube VIP · Grupo Lobo Energia · PRÉVIA PARA REVISÃO — não publicada como campanha. Condições e vínculos comerciais ainda sujeitos à validação documental.</div></footer>
 <div id="preview-modal" role="status" aria-live="polite" hidden>Esta é uma prévia. O cadastro gratuito e o envio da primeira conta de luz serão conectados ao sistema na publicação oficial.</div>
-<script>function previewModal(){const el=document.getElementById('preview-modal');el.hidden=false;setTimeout(()=>el.hidden=true,3500)}function slideProof(dir){const el=document.getElementById("proofTrack");if(!el)return;const card=el.querySelector(".proof-card");el.scrollBy({left:dir*((card?.getBoundingClientRect().width||266)+16),behavior:"smooth"})}</script><script>function v5calc(x){var v=Math.max(1,Math.min(15,Number(x)||1));document.getElementById('v5count').textContent=v;document.getElementById('v5total').textContent=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(v*100)}</script></body></html>
+<script>function previewModal(){const el=document.getElementById('preview-modal');el.hidden=false;setTimeout(()=>el.hidden=true,3500)}function slideProof(dir){const el=document.getElementById("proofTrack");if(!el)return;const card=el.querySelector(".proof-card");el.scrollBy({left:dir*((card?.getBoundingClientRect().width||266)+16),behavior:"smooth"})}</script><script>function v5calc(x){var v=Math.max(1,Math.min(15,Number(x)||1));document.getElementById('v5count').textContent=v;document.getElementById('v5total').textContent=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(v*100)}</script><script>
+(function(){
+function cloneProofs(){const source=document.getElementById('proofTrack');const target=document.getElementById('v6-proof-samples');if(!source||!target)return;const cards=[...source.querySelectorAll('.proof-card')].slice(0,2);if(cards.length!==2)return;target.innerHTML='';cards.forEach(x=>target.appendChild(x.cloneNode(true)));}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cloneProofs);else cloneProofs();
+const notification=document.createElement('div');notification.className='v6-toast';notification.setAttribute('aria-label','Exemplo ilustrativo de notificação');notification.innerHTML='<small>EXEMPLO ILUSTRATIVO</small><b id="v6-demo-name"></b><button type="button" aria-label="Fechar" onclick="this.parentElement.classList.remove(\'show\')">×</button>';document.body.appendChild(notification);
+const names=['João acabou de se cadastrar','Fernanda acabou de se cadastrar'];let i=0;function show(){if(i>=names.length)return;document.getElementById('v6-demo-name').textContent=names[i++];notification.classList.add('show');setTimeout(()=>notification.classList.remove('show'),3900);if(i<names.length)setTimeout(show,7300)}setTimeout(show,5000);
+})();
+function v6CopyScript(){const msg='Oi, tudo bem? Você gostaria de reduzir sua conta de luz em até 30%?\n\nÉ gratuito! Eu te mando meu link, você informa seu WhatsApp e envia uma foto da conta. A equipe te apresenta uma proposta.\n\n[SEU LINK]';navigator.clipboard?.writeText(msg).then(()=>{const b=document.getElementById('v6-copy-button');if(!b)return;const txt=b.textContent;b.textContent='Copiado! ✓';setTimeout(()=>b.textContent=txt,2000)});}
+</script></body></html>
