@@ -18,13 +18,16 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   await page.locator('.v5-portrait img').first().waitFor({state:'visible',timeout:10000});
   const h1=await page.locator('h1').first().innerText();
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
-  if(await page.locator('.reward-photo').count()!==12)errors.push('Faltam fotos em cartões de prêmios');
-  if(await page.locator('.reward-logo').count()<8)errors.push('Faltam logomarcas de produtos');
+  if(await page.locator('.reward-photo').count()!==11)errors.push('Faltam fotos em cartões de prêmios');
+  if(await page.locator('.reward-logo').count()<6)errors.push('Faltam logomarcas de produtos');
   const heroText=(await page.locator('body').innerText());
   for(const label of ['Camisas Bahia e Vitória','Carolina Herrera','Natura','Mary Kay','Óticas Ernesto','Ótica Salvador'])
     if(!heroText.includes(label))errors.push('Ausente: '+label);
   if(heroText.toLowerCase().includes('não constitui promessa'))errors.push('Texto comercial proibido permaneceu');
   if(await page.locator('.camarote-card').count()!==8)errors.push('A grade não tem 8 camarotes em cartões iguais');
+  if(await page.locator('.reward-body h3').filter({hasText:'Ingressos para o Carnaval'}).count()!==0)errors.push('Camarote destacado continua no catálogo');
+  const ratio=await page.locator('.camarote-card').evaluateAll(els=>els.map(el=>Math.round(el.getBoundingClientRect().width/el.getBoundingClientRect().height*100)/100));
+  if(ratio.some(v=>Math.abs(v-1)>.08))errors.push('Camarotes sem cards quadrados: '+JSON.stringify(ratio));
   if(await page.locator('.brand-four .brand-square').count()!==4)errors.push('Perfumes não têm quatro marcas iguais');
   if(await page.locator('.brand-two .brand-square').count()!==2)errors.push('Óticas não têm duas marcas equivalentes');
   if(await page.locator('.team-photo-right').count()!==1)errors.push('Imagem de camisa do Vitória não encontrada');
@@ -47,6 +50,18 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   if(photos.filter(x=>!x.loaded).length)errors.push('Fotos não carregadas: '+JSON.stringify(photos.filter(x=>!x.loaded)));
   if(logos.filter(x=>!x.loaded).length)errors.push('Logos não carregadas: '+JSON.stringify(logos.filter(x=>!x.loaded)));
   for(const id of ['presentes','calcular','whatsapp','painel','alcance'])if(await page.locator('#'+id).count()!==1)errors.push('Seção ausente '+id);
+  const range=page.locator('#range');
+  await range.evaluate(el=>{el.value='20000';el.dispatchEvent(new Event('input',{bubbles:true}))});
+  if(!(await page.locator('#creditos').innerText()).includes('6.000'))errors.push('Simulador de 30% não recalculou R$ 20 mil');
+  await page.context().grantPermissions(['clipboard-read','clipboard-write']);
+  for(const kind of ['before','after']){
+   await page.locator('[data-copy="msg-'+kind+'"]').click();
+   await page.waitForTimeout(130);
+   const copied=await page.evaluate(()=>navigator.clipboard.readText()).catch(e=>'CLIPBOARD_ERROR: '+e.message);
+   if(copied.length<100||copied.includes('CLIPBOARD_ERROR'))errors.push('Botão WhatsApp '+kind+' não copiou mensagem: '+copied.slice(0,90));
+  }
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await page.waitForTimeout(150);
   await page.screenshot({path:out+'/'+screen.id+'.png',fullPage:true,animations:'disabled',timeout:40000});
   const result={screen:screen.id,errors,hero,photos,logos,brands,overflow};
   fs.writeFileSync(out+'/'+screen.id+'.json',JSON.stringify(result,null,2));
