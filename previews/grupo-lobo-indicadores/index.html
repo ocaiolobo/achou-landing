@@ -1520,7 +1520,7 @@ body{color:#142136}
 </style></head>
 <body><div class="preview">PRÉVIA — CAMPANHA DE INDICADORES</div><header class="header"><div class="shell head-inner">
 <a class="brand" href="#top" aria-label="Clube VIP"><span class="brand-mark">VIP</span> Clube <span class="vip">VIP</span></a>
-<a class="button small" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true">Quero me registrar →</a></div></header>
+<a class="button small" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=influenciador" data-signup-cta="true">Quero me registrar →</a></div></header>
 <main id="top">
 <section class="hero-reimagined v5" id="inicio"><div class="shell v5-wrap">
 <div class="v5-grid">
@@ -1529,7 +1529,7 @@ body{color:#142136}
 <h1>GANHE ATÉ <span class="v5-amount">R$100</span><span class="v5-subtitle">POR CADA CONTA DE LUZ CREDENCIADA!</span></h1>
 <div class="v5-promise"><strong>Você não vende, você divulga!</strong>
 <p>Seus indicados podem ter <mark class="v5-green">até 30% de redução na conta de luz</mark>, <mark class="v5-yellow">sem pagar nada</mark> pelo credenciamento.</p></div>
-<a href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true" class="v5-cta">QUERO ME REGISTRAR <span>↗</span></a>
+<a href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=influenciador" data-signup-cta="true" class="v5-cta">QUERO ME REGISTRAR <span>↗</span></a>
 <div class="v5-under">✓ Cadastro 100% gratuito &nbsp;·&nbsp; Processo totalmente online</div>
 </div>
 <div class="v5-portrait">
@@ -1620,7 +1620,7 @@ Qualquer dúvida, me chama!</div>
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">✍️</span><div><h3>Cadastre-se gratuitamente</h3><p>Toque em <b>QUERO ME REGISTRAR</b> para iniciar seu cadastro.</p></div></div>
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">💡</span><div><h3>Envie uma conta de luz</h3><p>Pode ser a sua ou uma conta com autorização do titular.</p></div></div>
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">📲</span><div><h3>Receba seu link e indique</h3><p>Depois da aprovação, acompanhe suas indicações e comissões no painel.</p></div></div>
-</div><a class="hv1-cta" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true"><span>QUERO ME REGISTRAR</span><span class="hv1-cta-icon">→</span></a></div>
+</div><a class="hv1-cta" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=influenciador" data-signup-cta="true"><span>QUERO ME REGISTRAR</span><span class="hv1-cta-icon">→</span></a></div>
 </div></section><section class="section company-benefits indicador-presentes" id="presentes"><div class="shell">
 <div class="company-benefits-heading gifts-headline"><h2><span class="gift-heading-icon">✦</span> GANHE UM PRESENTE<br><span class="strong-blue">NA SUA TERCEIRA CONTA DE LUZ!</span></h2></div>
 <p class="presentes-lead">Escolha um dos benefícios disponíveis, conforme as condições da campanha.</p>
@@ -1705,7 +1705,7 @@ function v7ShowStory(color,btn){if(!v7OfficialFlyers[color])return;const img=doc
 function beginRealIndicatorRegistration(){const token=new URLSearchParams(location.search).get('convite');
 const url=new URL('https://energia-app-uv2r.onrender.com/');
 if(token&&/^[a-z0-9]{20,80}$/.test(token)){url.searchParams.set('cadastro',token);url.searchParams.set('origem_lp','1');}
-else{url.searchParams.set('novo_indicador','1');}
+else{url.searchParams.set('novo_indicador','1');url.searchParams.set('tipo','influenciador');}
 location.assign(url.href);return false;}
 (function(){const token=new URLSearchParams(location.search).get('convite');if(!token||!/^[a-z0-9]{20,80}$/.test(token))return;document.querySelectorAll('[data-signup-cta]').forEach(a=>{a.href='https://energia-app-uv2r.onrender.com/?cadastro='+encodeURIComponent(token)+'&origem_lp=1'});})();
 </script></body></html>
