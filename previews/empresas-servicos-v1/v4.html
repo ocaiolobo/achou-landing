@@ -177,6 +177,18 @@
 .brand-two .brand-square:first-child{background:#ffd42a}
 .brand-two .brand-square:first-child img{padding:0;object-fit:contain}
 @media(max-width:710px){.hero-reimagined.v5 h1{font-size:clamp(36px,9.2vw,52px)}.hero-reimagined.v5 .hero-new-subtitle{font-size:17px;line-height:1.42}.perfume-media .brand-square img{height:49px}.perfume-media .brand-square small{font-size:10px}.brand-two .brand-square img{height:58px}}
+
+/* Logomarcas proporcionais no mobile e imagens sempre legíveis */
+@media(max-width:710px){
+  .gift-grid>.reward:has(.perfume-media){grid-column:span 2}
+  .reward .perfume-media{height:252px;padding:12px}
+  .perfume-media .brand-four{gap:10px}
+  .perfume-media .brand-square{padding:8px;min-height:107px}
+  .perfume-media .brand-square img{height:78px;min-height:55px;display:block;opacity:1;object-fit:contain;width:95%;max-width:180px}
+  .perfume-media .brand-square small{font-size:12px}
+  .brand-two .brand-square img{height:65px;min-height:45px;width:100%}
+}
+@media(min-width:711px){.perfume-media .brand-square img{height:67px}}
 </style>
 </head>
 <body>
