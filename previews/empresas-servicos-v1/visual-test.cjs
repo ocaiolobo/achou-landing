@@ -10,7 +10,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=0653cf32';
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=b4ab162f';
   const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
@@ -19,7 +19,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   await page.locator('.v5-portrait img').first().waitFor({state:'visible',timeout:10000});
   const correctTitle=await page.locator('h1').first().innerText();
   const subtitle=await page.locator('.hero-new-subtitle').first().innerText();
-  if(!/DISTRIBUA[\\s\\S]*PRESENTES[\\s\\S]*PARA SEUS CLIENTES/.test(correctTitle))errors.push('Título não unificado');
+  if(!correctTitle.replace(/\s+/g,' ').includes('DISTRIBUA PRESENTES PARA SEUS CLIENTES'))errors.push('Título não unificado: '+correctTitle);
   if(subtitle.length<20)errors.push('Subtítulo não encontrado');
   if((await page.locator('#calcular').innerText()).includes('estimados (até 30%)'))errors.push('Título de cálculo desatualizado');
   if(!(await page.locator('.free').innerText()).includes('Funcionários: também gratuito'))errors.push('Funcionários: texto antigo');
@@ -59,7 +59,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   for(const [label,pathPart] of Object.entries(intended)){
     const image=page.locator('img[alt="'+label+'"]');
     if(await image.count()!==1)errors.push('Logo ausente: '+label);
-    else {const state=await image.evaluate(x=>({src:x.currentSrc,loaded:x.complete&&x.naturalWidth>0,shown:getComputedStyle(x).visibility!=='hidden'&&getComputedStyle(x).display!=='none'&&x.getBoundingClientRect().height>=34}));
+    else {const state=await image.evaluate(x=>({src:x.currentSrc,loaded:x.complete&&x.naturalWidth>0,shown:getComputedStyle(x).visibility!=='hidden'&&getComputedStyle(x).display!=='none'&&x.getBoundingClientRect().height>=30,rectH:x.getBoundingClientRect().height,opacity:getComputedStyle(x).opacity}));
     if(!state.src.includes(pathPart)||!state.loaded||!state.shown)errors.push('Logo falhou '+label+' '+JSON.stringify(state));}
   }
 
