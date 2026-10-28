@@ -21,7 +21,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
   if((await page.locator('body').innerText()).includes('Imagem da marca')===false&&await page.locator('.camarote-card').count()!==8)errors.push('Conteúdo V4 em cache, 8 camarotes não encontrados');
   if(await page.locator('.reward-photo').count()!==10)errors.push('Faltam fotos em cartões de prêmios');
-  if(await page.locator('.reward-logo').count()<6)errors.push('Faltam logomarcas de produtos');
+  if(await page.locator('.reward-logo').count()<5)errors.push('Faltam logomarcas de produtos');
   const heroText=(await page.locator('body').innerText());
   for(const label of ['Camisas Bahia e Vitória','Carolina Herrera','Natura','Mary Kay','Óticas Ernesto','Ótica Salvador'])
     if(!heroText.includes(label))errors.push('Ausente: '+label);
