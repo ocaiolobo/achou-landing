@@ -1520,7 +1520,7 @@ body{color:#142136}
 </style></head>
 <body><div class="preview">PRÉVIA — CAMPANHA DE INDICADORES</div><header class="header"><div class="shell head-inner">
 <a class="brand" href="#top" aria-label="Clube VIP"><span class="brand-mark">VIP</span> Clube <span class="vip">VIP</span></a>
-<a class="button small" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true">Quero me registrar →</a></div></header>
+<a class="button small" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=gerente" data-signup-cta="true">Quero me registrar →</a></div></header>
 <main id="top">
 <section class="hero-reimagined v5" id="inicio"><div class="shell v5-wrap">
 <div class="v5-grid">
@@ -1529,7 +1529,7 @@ body{color:#142136}
 <h1>GANHE ATÉ <span class="v5-amount">R$12 MIL</span><span class="v5-subtitle">AJUDANDO SEUS FUNCIONÁRIOS A ECONOMIZAR NA CONTA DE LUZ!</span></h1>
 <div class="v5-promise"><strong>Eles economizam <mark class="v5-green">até 30% na conta de luz</mark> de forma totalmente gratuita e <mark class="v5-yellow">sem pegadinhas.</mark></strong>
 <p>Você reúne sua equipe por apenas <b>15 minutos</b> e nós cuidamos de toda a apresentação e do credenciamento.</p></div>
-<a href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true" class="v5-cta">QUERO COMEÇAR A GANHAR <span>↗</span></a>
+<a href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=gerente" data-signup-cta="true" class="v5-cta">QUERO COMEÇAR A GANHAR <span>↗</span></a>
 <div class="v5-under">✓ Sem precisar vender ou investir nada &nbsp;·&nbsp; Simples, gratuito e 100% online</div>
 </div>
 <div class="v5-portrait">
@@ -1609,7 +1609,7 @@ Desconto e vale-compras sujeitos à elegibilidade, aprovação e às regras da c
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">💬</span><div><h3>2. Copie o Roteiro de gerente</h3><p>Convide a equipe para uma reunião online de 15 minutos. Nós fazemos a apresentação.</p></div></div>
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">🔗</span><div><h3>3. Envie o link após a reunião</h3><p>Copie a segunda mensagem do roteiro, que incluirá automaticamente seu link individual.</p></div></div>
 <div class="onboard-stage"><span class="onboard-icon" aria-hidden="true">📄</span><div><h3>4. A equipe faz o credenciamento</h3><p>Primeiro, WhatsApp e conta de luz. Depois da proposta, RG ou CNH, conta e assinatura eletrônica, se houver interesse.</p></div></div>
-</div><a class="hv1-cta" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1" data-signup-cta="true"><span>QUERO COMEÇAR A GANHAR</span><span class="hv1-cta-icon">→</span></a></div>
+</div><a class="hv1-cta" href="https://energia-app-uv2r.onrender.com/?novo_indicador=1&tipo=gerente" data-signup-cta="true"><span>QUERO COMEÇAR A GANHAR</span><span class="hv1-cta-icon">→</span></a></div>
 </div></section><section class="section company-benefits indicador-presentes" id="presentes"><div class="shell">
 <div class="company-benefits-heading gifts-headline"><h2><span class="gift-heading-icon">✦</span> SEUS FUNCIONÁRIOS PODEM GANHAR<br><span class="strong-blue">UM PRESENTE EM ATÉ 24 HORAS!</span></h2></div>
 <p class="presentes-lead">Funcionários que concluírem o credenciamento em até 24 horas podem escolher um dos benefícios disponíveis, conforme elegibilidade, disponibilidade e regulamento.</p>
@@ -1694,7 +1694,7 @@ function v7ShowStory(color,btn){if(!v7OfficialFlyers[color])return;const img=doc
 function beginRealIndicatorRegistration(){const token=new URLSearchParams(location.search).get('convite');
 const url=new URL('https://energia-app-uv2r.onrender.com/');
 if(token&&/^[a-z0-9]{20,80}$/.test(token)){url.searchParams.set('cadastro',token);url.searchParams.set('origem_lp','1');}
-else{url.searchParams.set('novo_indicador','1');}
+else{url.searchParams.set('novo_indicador','1');url.searchParams.set('tipo','gerente');}
 location.assign(url.href);return false;}
 (function(){const token=new URLSearchParams(location.search).get('convite');if(!token||!/^[a-z0-9]{20,80}$/.test(token))return;document.querySelectorAll('[data-signup-cta]').forEach(a=>{a.href='https://energia-app-uv2r.onrender.com/?cadastro='+encodeURIComponent(token)+'&origem_lp=1'});})();
 </script></body></html>
