@@ -105,7 +105,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
    const errors=[];
    page.on('pageerror',e=>errors.push('JS '+e.message));
    try{
-    const response=await page.goto(target.url+(target.url.includes('?')?'&':'?')+'visualCheck=20261028v8',{waitUntil:'domcontentloaded',timeout:65000});
+    const response=await page.goto(target.url+(target.url.includes('?')?'&':'?')+'visualCheck=20261028v9',{waitUntil:'domcontentloaded',timeout:65000});
     if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
     await page.waitForTimeout(2200);
     const galleries=await page.locator('.camarote-card').count();
