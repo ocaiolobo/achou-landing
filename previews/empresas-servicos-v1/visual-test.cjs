@@ -91,6 +91,42 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   if(errors.length)total++;
   await page.close();
  }
+
+ const otherPages=[
+  {id:'gerentes',url:'https://grupo-lobo-gerentes-previa-v1.onrender.com/'},
+  {id:'indicadores',url:'https://grupo-lobo-indicadores-divulgacao-v6.onrender.com/'},
+  {id:'empresas-compras',url:'https://grupo-lobo-empresas-previa-compras-1024.onrender.com/'},
+  {id:'beneficio',url:'https://energia-app-uv2r.onrender.com/beneficio/?indicator=grupo-lobo-energia'},
+  {id:'proposta-demo',url:'https://energia-app-uv2r.onrender.com/?oferta_demo=1'}
+ ];
+ for(const target of otherPages){
+  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
+   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},locale:'pt-BR',deviceScaleFactor:1});
+   const errors=[];
+   page.on('pageerror',e=>errors.push('JS '+e.message));
+   try{
+    const response=await page.goto(target.url+(target.url.includes('?')?'&':'?')+'visualCheck=20261028v8',{waitUntil:'domcontentloaded',timeout:65000});
+    if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
+    await page.waitForTimeout(2200);
+    const galleries=await page.locator('.camarote-card').count();
+    if(galleries!==8)errors.push('Camarotes em grade: '+galleries+' (esperados 8)');
+    if(galleries===8){
+      await page.locator('.camarote-card img').evaluateAll(els=>els.forEach(x=>x.loading='eager'));
+      await page.waitForTimeout(1800);
+      const images=await page.locator('.camarote-card img').evaluateAll(els=>els.map(x=>({loaded:x.complete&&x.naturalWidth>0,src:x.currentSrc})));
+      if(images.some(x=>!x.loaded))errors.push('Camarotes com imagem quebrada: '+images.filter(x=>!x.loaded).map(x=>x.src).join(', '));
+      const rects=await page.locator('.camarote-card').evaluateAll(els=>els.map(x=>({w:x.getBoundingClientRect().width,h:x.getBoundingClientRect().height})));
+      if(rects.some(x=>Math.abs(x.w/x.h-1)>.08))errors.push('Cards não quadrados');
+    }
+    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+    if(overflow>24)errors.push('Rolagem horizontal indesejada '+overflow);
+    await page.screenshot({path:out+'/'+target.id+'-'+screen.id+'.png',fullPage:false,animations:'disabled',timeout:30000});
+    console.log('PAGINA '+target.id+' '+screen.id+' '+(errors.length?'FALHOU':'PASSOU')+' '+JSON.stringify({url:page.url(),galleries,errors}));
+    if(errors.length)total++;
+   }catch(e){console.log('PAGINA '+target.id+' '+screen.id+' FALHOU '+String(e));total++}
+   await page.close();
+  }
+ }
  }finally{await browser.close()}
  if(total)process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1});
