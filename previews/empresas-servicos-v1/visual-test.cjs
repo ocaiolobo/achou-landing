@@ -10,7 +10,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=ef259a06';
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=3cde0eb4563f-v42';
   const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
