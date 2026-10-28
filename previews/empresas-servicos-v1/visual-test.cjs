@@ -10,7 +10,8 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const response=await page.goto(URL,{waitUntil:'domcontentloaded',timeout:65000});
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=2e671e38';
+  const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
   console.log('DOCUMENTO '+screen.id+' '+JSON.stringify({http:response?.status(),url:page.url(),htmlSize,title:await page.title(),head:((await page.locator('body').innerText()).slice(0,500))}));
@@ -18,6 +19,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   await page.locator('.v5-portrait img').first().waitFor({state:'visible',timeout:10000});
   const h1=await page.locator('h1').first().innerText();
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
+  if((await page.locator('body').innerText()).includes('Imagem da marca')===false&&await page.locator('.camarote-card').count()!==8)errors.push('Conteúdo V4 em cache, 8 camarotes não encontrados');
   if(await page.locator('.reward-photo').count()!==11)errors.push('Faltam fotos em cartões de prêmios');
   if(await page.locator('.reward-logo').count()<6)errors.push('Faltam logomarcas de produtos');
   const heroText=(await page.locator('body').innerText());
