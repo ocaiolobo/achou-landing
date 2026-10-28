@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs');
 const {chromium}=require('playwright');
-const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/?visual_probe=v3';
+const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_probe=v4';
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--disable-dev-shm-usage']});
  const out='visual-empresas-servicos';fs.mkdirSync(out,{recursive:true});
@@ -20,10 +20,26 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/?visual_probe=v3
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
   if(await page.locator('.reward-photo').count()!==12)errors.push('Faltam fotos em cartões de prêmios');
   if(await page.locator('.reward-logo').count()<8)errors.push('Faltam logomarcas de produtos');
+  const heroText=(await page.locator('body').innerText());
+  for(const label of ['Camisas Bahia e Vitória','Carolina Herrera','Natura','Mary Kay','Óticas Ernesto','Ótica Salvador'])
+    if(!heroText.includes(label))errors.push('Ausente: '+label);
+  if(heroText.toLowerCase().includes('não constitui promessa'))errors.push('Texto comercial proibido permaneceu');
+  if(await page.locator('.camarote-card').count()!==8)errors.push('A grade não tem 8 camarotes em cartões iguais');
+  if(await page.locator('.brand-four .brand-square').count()!==4)errors.push('Perfumes não têm quatro marcas iguais');
+  if(await page.locator('.brand-two .brand-square').count()!==2)errors.push('Óticas não têm duas marcas equivalentes');
+  if(await page.locator('.team-photo-right').count()!==1)errors.push('Imagem de camisa do Vitória não encontrada');
+  if(await page.locator('.strip,.benefits').count()>0)errors.push('Bloco repetido após a capa');
+  const wa=await page.locator('#whatsapp .chat-head').first().evaluate(el=>getComputedStyle(el).backgroundColor);
+  if(!['rgb(7, 94, 78)','rgb(7, 94, 79)'].includes(wa))errors.push('WhatsApp sem cabeçalho verde: '+wa);
+  const headerText=await page.locator('.header .brand').first().innerText();
+  if(!headerText.includes('Clube'))errors.push('Cabeçalho não segue marca Clube VIP da referência');
   await page.locator('img').evaluateAll(els=>els.forEach(i=>{i.loading='eager';i.decoding='sync'}));
   await page.waitForTimeout(6000);
   const photos=await page.locator('.reward-photo').evaluateAll(els=>els.map((x,i)=>({index:i,loaded:x.complete&&x.naturalWidth>=350,src:x.currentSrc,px:x.naturalWidth})));
   const logos=await page.locator('.reward-logo').evaluateAll(els=>els.map((x,i)=>({index:i,loaded:x.complete&&x.naturalWidth>0,src:x.currentSrc})));
+  const brands=await page.locator('.brand-square img,.team-photo-right,.camarote-card img').evaluateAll(els=>els.map((x,i)=>({index:i,loaded:x.complete&&x.naturalWidth>0,src:x.currentSrc})));
+  if(brands.some(x=>!x.loaded))errors.push('Imagens V4 indisponíveis: '+JSON.stringify(brands.filter(x=>!x.loaded)));
+
   const hero=await page.locator('.v5-portrait>img').evaluate(x=>({loaded:x.complete&&x.naturalWidth>=750,px:x.naturalWidth}));
   const overflow=await page.evaluate(()=>Math.max(document.body.scrollWidth,document.documentElement.scrollWidth)-document.documentElement.clientWidth);
   if(overflow>24)errors.push('Overflow horizontal '+overflow+'px');
@@ -32,7 +48,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/?visual_probe=v3
   if(logos.filter(x=>!x.loaded).length)errors.push('Logos não carregadas: '+JSON.stringify(logos.filter(x=>!x.loaded)));
   for(const id of ['presentes','calcular','whatsapp','painel','alcance'])if(await page.locator('#'+id).count()!==1)errors.push('Seção ausente '+id);
   await page.screenshot({path:out+'/'+screen.id+'.png',fullPage:true,animations:'disabled',timeout:40000});
-  const result={screen:screen.id,errors,hero,photos,logos,overflow};
+  const result={screen:screen.id,errors,hero,photos,logos,brands,overflow};
   fs.writeFileSync(out+'/'+screen.id+'.json',JSON.stringify(result,null,2));
   console.log(screen.id+' '+(errors.length?'FALHOU':'PASSOU')+' '+JSON.stringify(result).slice(0,16000));
   if(errors.length)total++;
