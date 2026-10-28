@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs');
 const {chromium}=require('playwright');
-const URL='https://grupo-lobo-empresas-servicos-previa-v1.onrender.com/';
+const URL='https://grupo-lobo-empresas-servicos-v2.onrender.com/?visual_probe=v2';
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--disable-dev-shm-usage']});
  const out='visual-empresas-servicos';fs.mkdirSync(out,{recursive:true});
