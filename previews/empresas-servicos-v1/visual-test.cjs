@@ -10,7 +10,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=2e671e38';
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=c12dc93a';
   const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
@@ -20,7 +20,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   const h1=await page.locator('h1').first().innerText();
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
   if((await page.locator('body').innerText()).includes('Imagem da marca')===false&&await page.locator('.camarote-card').count()!==8)errors.push('Conteúdo V4 em cache, 8 camarotes não encontrados');
-  if(await page.locator('.reward-photo').count()!==11)errors.push('Faltam fotos em cartões de prêmios');
+  if(await page.locator('.reward-photo').count()!==10)errors.push('Faltam fotos em cartões de prêmios');
   if(await page.locator('.reward-logo').count()<6)errors.push('Faltam logomarcas de produtos');
   const heroText=(await page.locator('body').innerText());
   for(const label of ['Camisas Bahia e Vitória','Carolina Herrera','Natura','Mary Kay','Óticas Ernesto','Ótica Salvador'])
@@ -31,6 +31,8 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   const ratio=await page.locator('.camarote-card').evaluateAll(els=>els.map(el=>Math.round(el.getBoundingClientRect().width/el.getBoundingClientRect().height*100)/100));
   if(ratio.some(v=>Math.abs(v-1)>.08))errors.push('Camarotes sem cards quadrados: '+JSON.stringify(ratio));
   if(await page.locator('.brand-four .brand-square').count()!==4)errors.push('Perfumes não têm quatro marcas iguais');
+  const equalBrands=await page.locator('.perfume-media .brand-square').evaluateAll(els=>els.map(x=>({w:Math.round(x.getBoundingClientRect().width),h:Math.round(x.getBoundingClientRect().height)})));
+  if(equalBrands.length!==4||equalBrands.some(x=>Math.abs(x.w-equalBrands[0].w)>3||Math.abs(x.h-equalBrands[0].h)>3))errors.push('Marcas de perfume sem destaque igualitário: '+JSON.stringify(equalBrands));
   if(await page.locator('.brand-two .brand-square').count()!==2)errors.push('Óticas não têm duas marcas equivalentes');
   if(await page.locator('.team-photo-right').count()!==1)errors.push('Imagem de camisa do Vitória não encontrada');
   if(await page.locator('.strip,.benefits').count()>0)errors.push('Bloco repetido após a capa');
