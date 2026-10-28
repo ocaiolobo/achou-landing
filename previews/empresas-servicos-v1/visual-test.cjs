@@ -10,7 +10,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=b4ab162f';
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=ef259a06';
   const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
@@ -21,6 +21,17 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   const subtitle=await page.locator('.hero-new-subtitle').first().innerText();
   if(!correctTitle.replace(/\s+/g,' ').includes('DISTRIBUA PRESENTES PARA SEUS CLIENTES'))errors.push('Título não unificado: '+correctTitle);
   if(subtitle.length<20)errors.push('Subtítulo não encontrado');
+  const promise=await page.locator('.v5-promise').innerText();
+  if(!promise.includes('economizam até 30% na conta de luz'))errors.push('Promessa dos funcionários não afirmativa');
+  if(!promise.includes('são revertidos em vale-presentes'))errors.push('Promessa dos vale-presentes não afirmativa');
+  if(promise.includes('podem'))errors.push('Texto subjetivo voltou para a capa');
+  const ernesto=await page.locator('.brand-two .ernesto-brand strong').first().evaluate(el=>{
+    const range=document.createRange();range.selectNodeContents(el);
+    const t=range.getBoundingClientRect(),c=el.getBoundingClientRect(),parent=el.parentElement.getBoundingClientRect();
+    return {textWidth:t.width,boxWidth:c.width,textLeft:t.left,textRight:t.right,parentLeft:parent.left,parentRight:parent.right};
+  });
+  if(ernesto.textRight>ernesto.parentRight+2||ernesto.textLeft<ernesto.parentLeft-2)errors.push('Logo Ernesto vaza do card: '+JSON.stringify(ernesto));
+
   if((await page.locator('#calcular').innerText()).includes('estimados (até 30%)'))errors.push('Título de cálculo desatualizado');
   if(!(await page.locator('.free').innerText()).includes('Funcionários: também gratuito'))errors.push('Funcionários: texto antigo');
   const h1=await page.locator('h1').first().innerText();
