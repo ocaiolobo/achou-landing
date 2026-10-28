@@ -1556,17 +1556,19 @@ body{color:#142136}
 <div class="v7-chat-header"><span class="v7-avatar">A</span><div><b>Equipe de colaboradores</b><small>Modelo ilustrativo de conversa</small></div><span class="v7-chat-menu" aria-hidden="true">⋮</span></div>
 <div class="v7-chat-body">
 <div class="v7-message-stage"><span>1 · ANTES DA REUNIÃO · CONVITE PARA A EQUIPE</span><button type="button" onclick="v7CopyOriginal('opening',this)">Copiar convite ⧉</button></div>
-<div class="v7-bubble v7-outgoing">Pessoal, boa noite! 😊
+<div class="v7-bubble v7-outgoing">Pessoal, preciso que vocês entrem em uma reunião online no dia [DIA], às [HORÁRIO], que vai durar apenas 15 minutos. 📅
 
-Tenho um benefício especial para apresentar a vocês: uma oportunidade de economizar até 30% na conta de luz e conhecer os benefícios do Clube VIP.
+Nessa reunião vou apresentar uma oportunidade de economia na conta de luz e explicar como participar da campanha de benefícios:
 
-Vamos fazer uma reunião online de apenas 15 minutos para explicar tudo. A participação é voluntária e gratuita.
+🎁 Vale-compras de R$500 no Assaí, Atacadão, Hiperideal, Loja Salvador ou Óticas Ernesto;
+⛽ R$200 em combustível nos postos Petrobras participantes; ou
+🎭 Um ingresso para um camarote credenciado em Salvador.
 
-📅 Dia: [DATA]
-🕗 Horário: [HORÁRIO]
-📲 Link da reunião: [LINK]
+Não vou explicar os detalhes agora. Todas as informações serão apresentadas na reunião.
 
-Quem tiver interesse, esteja com uma conta de luz em mãos e o RG ou a CNH do titular. Ninguém precisa enviar documentos no grupo; tudo será explicado na reunião.</div>
+Só peço que os interessados estejam com uma conta de luz e o RG ou CNH do titular. Se a conta não estiver em seu nome, tenham o documento do titular e a autorização dele.
+
+Não enviem documentos no grupo. A participação é gratuita e voluntária. Os benefícios dependem das regras da campanha.</div>
 <div class="v7-bubble v7-incoming">✅ Reunião online de 15 minutos realizada</div>
 <div class="v7-message-stage"><span>2 · DEPOIS DA REUNIÃO · LINK DE CREDENCIAMENTO</span><button type="button" onclick="v7CopyOriginal('complete',this)">Copiar mensagem pós-reunião ⧉</button></div>
 <div class="v7-bubble v7-outgoing v7-bubble-long">Pessoal, conforme combinamos na nossa reunião! ⚡😊
@@ -1682,7 +1684,7 @@ setTimeout(showVerifiedSignups,2000);setInterval(showVerifiedSignups,60000);
 })();
 function v6CopyScript(){const msg='Oi, tudo bem? Você gostaria de reduzir sua conta de luz em até 30%?\n\nÉ gratuito! Eu te mando meu link, você informa seu WhatsApp e envia uma foto da conta. A equipe te apresenta uma proposta.\n\n[SEU LINK]';navigator.clipboard?.writeText(msg).then(()=>{const b=document.getElementById('v6-copy-button');if(!b)return;const txt=b.textContent;b.textContent='Copiado! ✓';setTimeout(()=>b.textContent=txt,2000)});}
 </script><script>
-const v7OriginalMessages={opening:"Pessoal, boa noite! 😊\n\nTenho um benefício especial para apresentar a vocês: uma oportunidade de economizar até 30% na conta de luz e conhecer os benefícios do Clube VIP.\n\nVamos fazer uma reunião online de apenas 15 minutos para explicar tudo. A participação é voluntária e gratuita.\n\n📅 Dia: [DATA]\n🕗 Horário: [HORÁRIO]\n📲 Link da reunião: [LINK]\n\nQuem tiver interesse, esteja com uma conta de luz em mãos e o RG ou a CNH do titular. Ninguém precisa enviar documentos no grupo; tudo será explicado na reunião.",complete:"Pessoal, conforme combinamos na nossa reunião! ⚡😊\n\nPara vocês garantirem o desconto disponível na conta de luz e poderem escolher um dos vale-compras da campanha, credenciem sua conta aqui:\n\n👇 [LINK AUTOMÁTICO DO GERENTE]\n\n✅ Primeiro: informem o WhatsApp e enviem uma foto ou PDF da conta de luz.\n\n✅ Depois, se gostarem da proposta: enviem RG ou CNH e a conta de luz e assinem eletronicamente.\n\nTudo gratuito, 100% online e sem pegadinhas! 🎁\n\nDesconto e vale-compras sujeitos à elegibilidade, aprovação e às regras da campanha."};
+const v7OriginalMessages={opening:"Pessoal, preciso que vocês entrem em uma reunião online no dia [DIA], às [HORÁRIO], que vai durar apenas 15 minutos. 📅\n\nNessa reunião vou apresentar uma oportunidade de economia na conta de luz e explicar como participar da campanha de benefícios:\n\n🎁 Vale-compras de R$500 no Assaí, Atacadão, Hiperideal, Loja Salvador ou Óticas Ernesto;\n⛽ R$200 em combustível nos postos Petrobras participantes; ou\n🎭 Um ingresso para um camarote credenciado em Salvador.\n\nNão vou explicar os detalhes agora. Todas as informações serão apresentadas na reunião.\n\nSó peço que os interessados estejam com uma conta de luz e o RG ou CNH do titular. Se a conta não estiver em seu nome, tenham o documento do titular e a autorização dele.\n\nNão enviem documentos no grupo. A participação é gratuita e voluntária. Os benefícios dependem das regras da campanha.",complete:"Pessoal, conforme combinamos na nossa reunião! ⚡😊\n\nPara vocês garantirem o desconto disponível na conta de luz e poderem escolher um dos vale-compras da campanha, credenciem sua conta aqui:\n\n👇 [LINK AUTOMÁTICO DO GERENTE]\n\n✅ Primeiro: informem o WhatsApp e enviem uma foto ou PDF da conta de luz.\n\n✅ Depois, se gostarem da proposta: enviem RG ou CNH e a conta de luz e assinem eletronicamente.\n\nTudo gratuito, 100% online e sem pegadinhas! 🎁\n\nDesconto e vale-compras sujeitos à elegibilidade, aprovação e às regras da campanha."};
 const v7OfficialFlyers={"amarelo":"https://grupo-lobo-flyers-aprovados-2026.vercel.app/flyer-amarelo.jpg","azul":"https://grupo-lobo-flyers-aprovados-2026.vercel.app/flyer-azul.jpg"};
 function v7CopyOriginal(kind,btn){const text=v7OriginalMessages[kind];if(!text)return;navigator.clipboard?.writeText(text).then(()=>{const old=btn.textContent;btn.textContent='Copiado! ✓';setTimeout(()=>btn.textContent=old,2200)}).catch(()=>{});}
 function v7ShowStory(color,btn){if(!v7OfficialFlyers[color])return;const img=document.getElementById('v7-original-story');const error=document.getElementById('v7-photo-error');const full=document.getElementById('v7-open-image');const fallback=document.getElementById('v7-fallback-original');img.alt='Flyer '+color+' oficial do Grupo Lobo Energia, utilizado no painel do indicador';img.style.display='block';if(error)error.hidden=true;img.src=v7OfficialFlyers[color];full.href=v7OfficialFlyers[color];if(fallback)fallback.href=v7OfficialFlyers[color];document.querySelectorAll('.v7-story-option').forEach(x=>{const selected=x===btn;x.classList.toggle('selected',selected);x.setAttribute('aria-pressed',selected?'true':'false')});}
