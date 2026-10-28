@@ -10,7 +10,7 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
  for(const screen of [{id:'mobile',width:390,height:844},{id:'desktop',width:1365,height:900}]){
   const page=await browser.newPage({viewport:{width:screen.width,height:screen.height},deviceScaleFactor:1,locale:'pt-BR'});
   const errors=[];page.on('pageerror',e=>errors.push('JS: '+e.message));
-  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=3cde0eb4563f-v42';
+  const uniqueUrl=URL+'&viewport='+screen.id+'&revision=3ae14d31-duas-etapas';
   const response=await page.goto(uniqueUrl,{waitUntil:'domcontentloaded',timeout:65000});
   if(!response||response.status()>=400)errors.push('HTTP '+(response?.status()??'none'));
   const htmlSize=await page.evaluate(()=>document.documentElement.outerHTML.length);
@@ -37,6 +37,13 @@ const URL='https://grupo-lobo-empresas-servicos-v3.onrender.com/v4.html?visual_p
   const h1=await page.locator('h1').first().innerText();
   if(!h1.includes('PRESENTES'))errors.push('Título errado: '+h1);
   if((await page.locator('body').innerText()).includes('Imagem da marca')===false&&await page.locator('.camarote-card').count()!==8)errors.push('Conteúdo V4 em cache, 8 camarotes não encontrados');
+  const steps=page.locator('#funciona .step');
+  if(await steps.count()!==2)errors.push('Etapas incorretas: '+await steps.count());
+  const labels=await steps.locator('h3').allInnerTexts();
+  if(labels[0]!=='Convocar os funcionários'||labels[1]!=='Reunião online de 15 minutos')errors.push('Etapas não correspondem a convocar e reunião: '+JSON.stringify(labels));
+  if((await page.locator('#funciona').innerText()).includes('03'))errors.push('Terceira etapa continua visível');
+  if(!(await page.locator('.timeline-bar').innerText()).includes('15 minutos'))errors.push('Prazo de 15 minutos ausente');
+  if((await page.locator('.final').innerText()).includes('30 minutos'))errors.push('Rodapé ainda cita 30 minutos');
   if(await page.locator('.reward-photo').count()!==10)errors.push('Faltam fotos em cartões de prêmios');
   if(await page.locator('.reward-logo').count()<5)errors.push('Faltam logomarcas de produtos');
   const heroText=(await page.locator('body').innerText());
