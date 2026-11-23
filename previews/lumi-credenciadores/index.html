@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css?v=3">
+<link rel="stylesheet" href="./style.css?v=4">
 </head>
 <body>
 <div id="reading-progress"></div>
@@ -146,32 +146,48 @@
   <div class="training-grid">
     <div class="training-card reveal">
       <div class="training-head"><span class="training-icon whatsapp-icon">◉</span><div><span>PASSO 01</span><h3>Divulgação pelo WhatsApp</h3></div></div>
-      <div class="chat-window"><div class="chat-label">SCRIPT DA LUMI · WHATSAPP</div>
-        <div class="chat-bubble" id="whatsappText">Oi! 😊
+      <div class="chat-window official-wa">
+        <div class="wa-heading"><div class="wa-avatar">A</div><div><strong>Amigo(a)</strong><small>Conversa de exemplo · roteiro oficial LUMI</small></div><span class="wa-menu">⋮</span></div>
+        <div class="wa-body"><div class="wa-step-label">PRIMEIRA MENSAGEM <button class="wa-copy" type="button" id="copyWhatsapp">Copiar 1ª mensagem ⧉</button></div>
+        <div class="chat-bubble" id="whatsappText">Oi, amigo! Tudo bem? 😊
 
-Posso te mostrar uma forma gratuita de verificar se sua conta de luz pode ter até 30% de desconto, sem obras e sem taxa de adesão?
+Se eu conseguisse reduzir sua conta de luz em até 30%, completamente de graça, sem obras e sem pegadinhas, você gostaria? ⚡</div>
+        <div class="wa-response">Sim, mas como funciona?</div>
+        <div class="wa-step-label">SEGUNDA MENSAGEM · APÓS O INTERESSE <button class="wa-copy" type="button" id="copyWhatsappSecond">Copiar 2ª mensagem ⧉</button></div>
+        <div class="chat-bubble" id="whatsappTextSecond">É exatamente isso que quero te apresentar! 😄
 
-Se quiser, te mando o link.</div>
-        <div class="chat-time">1 · Primeira mensagem <span>✓✓</span></div>
-        <div class="chat-label" style="margin-top:17px">DEPOIS QUE A PESSOA RESPONDER</div>
-        <div class="chat-bubble" id="whatsappTextSecond">É simples! ⚡
+No meu trabalho, os funcionários conseguiram um benefício. Sobraram duas vagas, pediram duas indicações e lembrei de você!
 
-Você informa o WhatsApp, envia uma foto da conta de luz e recebe uma proposta com os valores. Só segue se gostar.
+📲 Abra meu link, envie a conta de luz em PDF (ou uma foto pelo celular) e seu WhatsApp. A proposta chega em até 1 minuto. Se gostar, envie RG ou CNH e assine eletronicamente. Tudo online, sem taxa nem obras!
 
-👇 [SEU LINK INDIVIDUAL]
+🎁 Concluindo nas próximas 24 horas, você pode ganhar um cupom da campanha:
+💉 Botox
+🛒 Vale-compras no Hiperideal
+⛽ R$ 200 em combustível Petrobras
+🛍️ Até R$ 1.500 em vale-compras na Loja Salvador
 
-Participação sem custo de adesão. Economia sujeita à aprovação.</div>
-        <div class="chat-time">2 · Envie com seu link <span>✓✓</span></div></div>
-      <div class="script-actions">
-        <button class="copy-script" id="copyWhatsapp" type="button">Copiar primeira mensagem <span>⧉</span></button>
-        <button class="copy-script" id="copyWhatsappSecond" type="button">Copiar segunda mensagem <span>⧉</span></button>
+Confira prêmios e regras disponíveis.
+
+👇 Faça pelo meu link:
+[SEU LINK INDIVIDUAL]
+
+Qualquer dúvida, me chama!</div>
+        <p class="wa-warning">Ajuste informações pessoais, número de vagas, prêmios e prazo à situação real. No cadastro, o link individual substitui o marcador de exemplo.</p>
+        </div>
       </div>
       <p class="training-description">Use seu link individual, siga o roteiro e acompanhe o cliente até a finalização.</p>
     </div>
     <div class="training-card reveal">
       <div class="training-head"><span class="training-icon">♧</span><div><span>PASSO 02</span><h3>Credenciamento presencial</h3></div></div>
-      <div class="field-guide"><span class="field-guide-badge">ROTEIRO PRÁTICO</span><ol><li><strong>Apresente a economia.</strong> Explique quem é a LUMI e que não há obras nem taxa.</li><li><strong>Confira a conta de luz.</strong> Oriente o cliente no envio da conta e dos documentos.</li><li><strong>Acompanhe a assinatura.</strong> Mostre o contrato e finalize o processo com consentimento do titular.</li></ol></div>
-      <button class="copy-script" id="copyField" type="button">Copiar roteiro presencial <span>⧉</span></button>
+      <div class="field-guide" id="presencial3">
+        <span class="field-guide-badge">ROTEIRO PRÁTICO · TRÊS PASSOS</span>
+        <ol class="presencial-steps">
+          <li><strong>1. Apresente a economia e pergunte.</strong> “Você já participa de algum programa de economia na conta de luz? A Lei 14.300/2022 regulamenta a geração distribuída. Gostaria de verificar uma proposta gratuita de até 30% de economia com a LUMI?”</li>
+          <li><strong>2. Solicite os documentos com autorização.</strong> Peça a foto da conta de luz e do RG ou CNH do titular, pelo canal de cadastro. Confira os dados necessários para a proposta.</li>
+          <li><strong>3. Faça tudo eletronicamente.</strong> Apresente a proposta e acompanhe a assinatura digital com consentimento do titular. O fluxo foi pensado para levar aproximadamente dois minutos, com a documentação em mãos.</li>
+        </ol>
+      </div>
+      <button class="copy-script" id="copyField" type="button">Copiar roteiro presencial de 3 passos <span>⧉</span></button>
       <p class="training-description">Você recebe o passo a passo, scripts prontos, treinamento presencial e orientação para concluir cada credenciamento.</p>
     </div>
   </div>
@@ -182,8 +198,43 @@ Participação sem custo de adesão. Economia sujeita à aprovação.</div>
 </section>
 
 <section class="section coupons-section" id="cupons">
- <div class="container coupons-container"><div class="coupons-art reveal"><div class="coupon-glow"></div><div class="coupon-card"><div class="coupon-brand">LUMI<span>✳</span></div><small>BENEFÍCIO PARA O CONSUMIDOR</small><strong>SEU<br>CUPOM</strong><div class="coupon-dashes"></div><span class="coupon-text">UMA ECONOMIA QUE VAI ALÉM DA LUZ</span></div><div class="coupon-spark">✴</div></div>
- <div class="coupons-copy reveal"><p class="superline">SEU CLIENTE TAMBÉM GANHA</p><h2 class="section-title">Credenciou a conta?<br><span class="orange-text">Ganhou cupom de desconto.</span></h2><p class="lead-text">Além de reduzir a conta de energia, quem conclui o credenciamento da campanha recebe seu <strong>cupom de desconto LUMI</strong>.</p><p class="body-text">Mais um motivo para apresentar a LUMI aos seus contatos: uma solução que entrega economia e benefícios para o consumidor.</p><div class="coupon-tags"><span>Mercados</span><span>Combustível</span><span>Óticas</span><span>Experiências</span></div><p class="coupon-foot">Opções, valores e utilização seguem as condições da campanha vigente, apresentadas ao consumidor no credenciamento.</p></div></div>
+  <div class="container">
+    <div class="coupon-headline reveal">
+      <div><p class="superline">CLUBE VIP · BENEFÍCIO DO CONSUMIDOR</p>
+      <h2 class="section-title">Credenciou sua conta?<br><span class="orange-text">Ganhe um cupom de R$ 150.</span></h2>
+      <p class="lead-text"><strong>O cupom de desconto/vale-compras de R$ 150 é para o consumidor que conclui o credenciamento da própria conta de luz.</strong> O credenciador recebe suas comissões; o titular recebe o benefício da campanha.</p></div>
+      <div class="coupon-sum"><span>CUPOM / VALE-COMPRAS</span><strong>R$ 150</strong><small>Para quem credencia sua própria conta</small></div>
+    </div>
+    <div class="vip-showcase reveal">
+      <div class="vip-showcase-top"><span class="vip-spark">✦</span><div><span class="orange-overline">CLUBE VIP · BENEFÍCIOS EM DESTAQUE</span><h3>Veja lugares e experiências apresentados nas campanhas da LUMI.</h3></div></div>
+      <div class="vip-kicker">VALE-COMPRAS EM MERCADOS</div>
+      <div class="market-logos">
+        <div class="market-logo"><b class="market-hiper">Hiperideal</b><small>Vale-compras</small></div>
+        <div class="market-logo"><b class="market-assai">ASSAÍ <em>ATACADISTA</em></b><small>Vale-compras</small></div>
+        <div class="market-logo"><b class="market-atacadao">ATACADÃO</b><small>Vale-compras</small></div>
+      </div>
+      <div class="vip-amenities">
+        <div class="vip-amenity"><span class="vip-icon">◉</span><div><small>BENEFÍCIOS EM ÓTICAS</small><strong>Ótica Salvador</strong><p>Óculos e compras em óticas</p></div></div>
+        <div class="vip-amenity"><span class="vip-icon">◉</span><div><small>BENEFÍCIOS EM ÓTICAS</small><strong>Ótica Ernesto</strong><p>Óculos e compras em óticas</p></div></div>
+        <div class="vip-amenity"><span class="vip-icon">⛽</span><div><small>COMBUSTÍVEL</small><strong>Petrobras e Shell</strong><p>Benefícios para abastecer</p></div></div>
+        <div class="vip-amenity"><span class="vip-icon cinema">CINEMARK</span><div><small>CINEMA</small><strong>Descontos em ingressos</strong><p>Campanhas de cinema</p></div></div>
+        <div class="vip-amenity"><span class="vip-icon">✳</span><div><small>ESTÉTICA E HARMONIZAÇÃO</small><strong>Procedimentos estéticos</strong><p>Benefícios de campanhas de beleza</p></div></div>
+      </div>
+      <details class="carnaval-details"><summary>Carnaval de Salvador <span>Veja os camarotes apresentados nas campanhas ↗</span></summary>
+        <div class="carnaval-grid">
+          <div class="carnaval-mini"><img loading="lazy" src="https://media.betimelapse.com.br/uploads/eventos/Camarote-Salvador-2027-Capa-Timelapse-v2.jpg" alt="Camarote Salvador"><b>Camarote Salvador</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://media.betimelapse.com.br/uploads/eventos/Camarote-Brahma-Salvador-2027-Capa-Timelapse-v4.jpg" alt="Camarote Brahma"><b>Camarote Brahma</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://media.betimelapse.com.br/uploads/2026/04/1776746938302_Camarote_Club_2027_-_Capa_Tempor__ria_Timelapse.jpg" alt="Camarote Club"><b>Camarote Club</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://organizador.ticketmaker.com.br/Content/Banner/e6854bce-be46-4ad7-9d39-738d2301072b.webp" alt="Camarote Villa"><b>Camarote Villa</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://uploads.boratickets.com.br/eventos/dc912a253d1e9ba.jpg" alt="Camarote Glamour"><b>Camarote Glamour</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://baladasbrasil.com.br/wp-content/uploads/camarote-planeta-band-2024-aspect-ratio-845-540.png" alt="Planeta Band"><b>Planeta Band</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://organizador.ticketmaker.com.br/Content/Banner/c4d826d4-8883-4873-b068-56880192884e.webp" alt="Harém Soho"><b>Harém Soho</b></div>
+          <div class="carnaval-mini"><img loading="lazy" src="https://organizador.ticketmaker.com.br/Content/Banner/b48db135-82de-450b-aac9-5fc095432e98.webp" alt="Camarote Mar"><b>Camarote Mar</b></div>
+        </div>
+      </details>
+      <p class="vip-disclaimer">Exemplos de campanhas e estabelecimentos apresentados na LUMI. Marcas não indicam parceria formal; resgate, valores específicos e disponibilidade seguem o regulamento vigente. As experiências listadas não representam todas um vale-compras de R$ 150.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section receipts-section" id="comprovantes">
@@ -204,5 +255,5 @@ Participação sem custo de adesão. Economia sujeita à aprovação.</div>
 <footer class="site-footer"><div class="container footer-inner"><div class="footer-logo"><span>ϟ</span><strong>LUMI <em>ENERGIA</em></strong></div><p>Transforme economia em oportunidade.</p><a href="https://energia-app-uv2r.onrender.com/" target="_blank" rel="noopener noreferrer">Já sou cadastrado ↗</a></div><div class="container footer-fine">PRÉVIA DE APROVAÇÃO · REMUNERAÇÃO E CAMPANHAS SUJEITAS À VALIDAÇÃO COMERCIAL E CONTRATUAL</div></footer>
 <dialog class="signup-dialog" id="signupDialog" aria-labelledby="signupTitle"><form method="dialog" class="modal-card"><button class="modal-x" value="close" aria-label="Fechar">×</button><span class="modal-icon">ϟ</span><h2 id="signupTitle">Você está a um passo de começar.</h2><p>Esta página ainda é uma prévia para aprovação. O botão de cadastramento será conectado ao fluxo oficial quando a campanha for aprovada.</p><button class="button button-primary" value="close">Entendi <span>✓</span></button></form></dialog>
 <div class="preview-stamp">PRÉVIA PARA APROVAÇÃO</div>
-<script src="./app.js?v=3"></script>
+<script src="./app.js?v=4"></script>
 </body></html>
