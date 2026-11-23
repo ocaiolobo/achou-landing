@@ -14,7 +14,20 @@ $('#firstMonthResult').textContent=brl(first);$('#selectedRate').textContent=rat
 const firstBar=$('.comp-first'), recurringBar=$('.comp-recurring');if(firstBar)firstBar.style.width='100%';if(recurringBar)recurringBar.style.width=Math.min(100,Math.round(recurring/first*100))+'%';
 }
 $$('.earnings-row').forEach(btn=>btn.addEventListener('click',()=>updateResults(btn)));updateResults($('.earnings-row.active'));
-const scriptField=['Olá! Tudo bem? Aqui é da equipe de credenciamento LUMI Energia.','','A LUMI apresenta uma solução de economia de até 30% na conta de luz, sem obras nem taxa de adesão ao desconto.','','Eu posso conferir sua conta de luz e explicar como funciona. Se quiser aderir, envio a proposta e orientações para os documentos e assinatura digital. Você analisa tudo antes de assinar.'].join('\n');
+const scriptField=[
+ 'ROTEIRO PRESENCIAL LUMI — 3 PASSOS',
+ '',
+ '1. PERGUNTE SOBRE A ECONOMIA',
+ 'Você já participa de algum programa para reduzir a conta de luz? A Lei 14.300/2022 regulamenta a geração distribuída. Gostaria de conhecer uma proposta gratuita da LUMI para verificar uma redução de até 30% na sua conta?',
+ '',
+ '2. CONFIRA A DOCUMENTAÇÃO COM AUTORIZAÇÃO',
+ 'Com autorização do titular, encaminhe pelo canal seguro do sistema uma foto da conta de luz e RG ou CNH. Confira os dados e a proposta antes da assinatura.',
+ '',
+ '3. FINALIZE ELETRONICAMENTE',
+ 'Apresente a proposta, esclareça as condições e acompanhe a assinatura eletrônica voluntária do titular. Com os documentos em mãos, o processo foi pensado para levar aproximadamente 2 minutos.',
+ '',
+ 'A Lei 14.300/2022 não concede desconto automático: a economia depende do contrato e das condições da unidade consumidora.'
+].join('\\n');
 async function copyText(value,button){const original=button.innerHTML;try{await navigator.clipboard.writeText(value);button.textContent='Copiado! ✓';}catch(err){let field=document.createElement('textarea');field.value=value;document.body.appendChild(field);field.select();try{document.execCommand('copy');button.textContent='Copiado! ✓';}catch(_){button.textContent='Não foi possível copiar';}field.remove();}setTimeout(()=>button.innerHTML=original,1800);}
 const whats=$('#copyWhatsapp');if(whats){whats.addEventListener('click',()=>copyText($('#whatsappText').textContent.trim(),whats));}
 const second=$('#copyWhatsappSecond');if(second){second.addEventListener('click',()=>copyText($('#whatsappTextSecond').textContent.trim(),second));}
