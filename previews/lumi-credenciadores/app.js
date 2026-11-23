@@ -17,6 +17,7 @@ $$('.earnings-row').forEach(btn=>btn.addEventListener('click',()=>updateResults(
 const scriptField=['Olá! Tudo bem? Aqui é da equipe de credenciamento LUMI Energia.','','A LUMI apresenta uma solução de economia de até 30% na conta de luz, sem obras nem taxa de adesão ao desconto.','','Eu posso conferir sua conta de luz e explicar como funciona. Se quiser aderir, envio a proposta e orientações para os documentos e assinatura digital. Você analisa tudo antes de assinar.'].join('\n');
 async function copyText(value,button){const original=button.innerHTML;try{await navigator.clipboard.writeText(value);button.textContent='Copiado! ✓';}catch(err){let field=document.createElement('textarea');field.value=value;document.body.appendChild(field);field.select();try{document.execCommand('copy');button.textContent='Copiado! ✓';}catch(_){button.textContent='Não foi possível copiar';}field.remove();}setTimeout(()=>button.innerHTML=original,1800);}
 const whats=$('#copyWhatsapp');if(whats){whats.addEventListener('click',()=>copyText($('#whatsappText').textContent.trim(),whats));}
+const second=$('#copyWhatsappSecond');if(second){second.addEventListener('click',()=>copyText($('#whatsappTextSecond').textContent.trim(),second));}
 const field=$('#copyField');if(field)field.addEventListener('click',()=>copyText(scriptField,field));
 const dialog=$('#signupDialog');const signup=$('#openSignup');if(dialog&&signup){signup.addEventListener('click',()=>{if(dialog.showModal)dialog.showModal();else alert('Esta é uma prévia. O cadastro será conectado após aprovação.');});}
 })();
