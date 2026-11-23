@@ -27,7 +27,7 @@ const scriptField=[
  'Apresente a proposta, esclareça as condições e acompanhe a assinatura eletrônica voluntária do titular. Com os documentos em mãos, o processo foi pensado para levar aproximadamente 2 minutos.',
  '',
  'A Lei 14.300/2022 não concede desconto automático: a economia depende do contrato e das condições da unidade consumidora.'
-].join('\\n');
+].join(String.fromCharCode(10));
 async function copyText(value,button){const original=button.innerHTML;try{await navigator.clipboard.writeText(value);button.textContent='Copiado! ✓';}catch(err){let field=document.createElement('textarea');field.value=value;document.body.appendChild(field);field.select();try{document.execCommand('copy');button.textContent='Copiado! ✓';}catch(_){button.textContent='Não foi possível copiar';}field.remove();}setTimeout(()=>button.innerHTML=original,1800);}
 const whats=$('#copyWhatsapp');if(whats){whats.addEventListener('click',()=>copyText($('#whatsappText').textContent.trim(),whats));}
 const second=$('#copyWhatsappSecond');if(second){second.addEventListener('click',()=>copyText($('#whatsappTextSecond').textContent.trim(),second));}
